@@ -50,3 +50,4 @@ page__banner.addEventListener('mouseleave', function(){
     sliderBtn_prev.style.cssText = "visibility: hidden;" + "opacity:0;" + "transition: all .3s ease-out"
     sliderBtn_next.style.cssText = "visibility: hidden;" + "opacity:0;" + "transition: all .3s ease-out"
 });
+

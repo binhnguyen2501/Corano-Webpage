@@ -380,9 +380,6 @@ header{
     color: white;
     background: rgba(0,0,0,0.5);
 }
-
-
-
 .slider1-Content{
     position: absolute;
     top: 168px;
@@ -438,5 +435,4 @@ header{
     color: rgb(85,85,85);
     white-space: nowrap;
 }
-
 /**********/
