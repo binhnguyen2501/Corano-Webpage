@@ -3,12 +3,9 @@ const page__banner_slider = document.querySelector('.page__banner--slider');
 const banner_sliderImg = document.querySelectorAll('.banner--slider img');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
-
 let counter = 1;
 const sizeImg = banner_sliderImg[counter].clientWidth;
-
 page__banner_slider.style.transform = "translateX(" + (-sizeImg * counter) + "px)" ;
-
 nextBtn.addEventListener('click' , function(){
     if(counter >= banner_sliderImg.length - 1){
         return;
@@ -25,7 +22,6 @@ prevBtn.addEventListener('click' , function(){
     counter--;
     page__banner_slider.style.transform = "translateX(" + (-sizeImg * counter) + "px)" ;
 });
-
 page__banner_slider.addEventListener('transitionend' , function(){
     if(banner_sliderImg[counter].id === 'lastClone'){
         page__banner_slider.style.transition = "none";
@@ -50,4 +46,37 @@ page__banner.addEventListener('mouseleave', function(){
     sliderBtn_prev.style.cssText = "visibility: hidden;" + "opacity:0;" + "transition: all .3s ease-out"
     sliderBtn_next.style.cssText = "visibility: hidden;" + "opacity:0;" + "transition: all .3s ease-out"
 });
+/*Sticky Navbar*/
+const height = document.querySelector('header')
+const navbarHeight = height.clientHeight;
+const userNavbar = document.querySelector('.header__navbar--user');
+const mainNavbar = document.querySelector('.header__navbar--main');
+
+const mainNavbar_search = document.querySelector('.navbar--search');
+const mainNavbar_wrapper = document.querySelector('.navbar--wrapper');
+const mainNavbar_title = document.querySelector('.main-title');
+const mainNavbar_title__img = document.querySelector('.main-title img')
+const mainNavbar_main = document.querySelector('.navbar--main');
+window.addEventListener('scroll' , function(){
+    console.log(window.scrollY)
+    if(window.scrollY >= navbarHeight){
+        userNavbar.classList.add('Userfixed');
+        mainNavbar.classList.add('Mainfixed');
+        mainNavbar_search.style.cssText = 'display: none'
+        mainNavbar_title.style.cssText = 'margin-left: 12rem;' + 'width: 13.66666667%' + 'flex: 0'
+        mainNavbar_title__img.style.cssText = ' width: 47.5%;'
+        mainNavbar_main.style.cssText = 'flex: 1;' + 'float: left;'
+        mainNavbar_wrapper.style.cssText = 'width: 25%' + 'flex: 0;' + 'float: right;' + 'margin-right: 12rem;'
+    }
+    else{
+        userNavbar.classList.remove('Userfixed');
+        mainNavbar.classList.remove('Mainfixed');
+        mainNavbar_search.style.cssText = 'display: static'
+        mainNavbar_title.style.cssText = 'margin-left: 7.5rem;' + 'flex: .28;'
+        mainNavbar_title__img.style.cssText = ' width: 45%;'
+        mainNavbar_main.style.cssText = 'flex: .8;'
+        mainNavbar_wrapper.style.cssText = 'flex: .18;'
+    }
+});
+
 
