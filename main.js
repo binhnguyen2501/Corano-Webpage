@@ -51,7 +51,6 @@ const height = document.querySelector('header')
 const navbarHeight = height.clientHeight;
 const userNavbar = document.querySelector('.header__navbar--user');
 const mainNavbar = document.querySelector('.header__navbar--main');
-
 const mainNavbar_search = document.querySelector('.navbar--search');
 const mainNavbar_wrapper = document.querySelector('.navbar--wrapper');
 const mainNavbar_title = document.querySelector('.main-title');
@@ -60,8 +59,8 @@ const mainNavbar_main = document.querySelector('.navbar--main');
 window.addEventListener('scroll' , function(){
     console.log(window.scrollY)
     if(window.scrollY >= navbarHeight){
-        userNavbar.classList.add('Userfixed');
-        mainNavbar.classList.add('Mainfixed');
+        userNavbar.classList.add('user_navbarFixed');
+        mainNavbar.classList.add('main_navbarFixed');
         mainNavbar_search.style.cssText = 'display: none'
         mainNavbar_title.style.cssText = 'margin-left: 12rem;' + 'width: 13.66666667%' + 'flex: 0'
         mainNavbar_title__img.style.cssText = ' width: 47.5%;'
@@ -69,8 +68,8 @@ window.addEventListener('scroll' , function(){
         mainNavbar_wrapper.style.cssText = 'width: 25%' + 'flex: 0;' + 'float: right;' + 'margin-right: 12rem;'
     }
     else{
-        userNavbar.classList.remove('Userfixed');
-        mainNavbar.classList.remove('Mainfixed');
+        userNavbar.classList.remove('user_navbarFixed');
+        mainNavbar.classList.remove('main_navbarFixed');
         mainNavbar_search.style.cssText = 'display: static'
         mainNavbar_title.style.cssText = 'margin-left: 7.5rem;' + 'flex: .28;'
         mainNavbar_title__img.style.cssText = ' width: 45%;'
