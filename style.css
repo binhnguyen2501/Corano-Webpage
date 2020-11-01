@@ -488,8 +488,8 @@ header{
     position: fixed;
     bottom: 2.5rem;
     right: 1rem;
-    animation: slideIn .4s ease-out;
-    transition: animation .6s ease-in;
+    animation: slideIn .7s ease-out;
+    transition: animation .7s ease-out;
 }
 .peBtn__goUp{
     font-size: 2rem;
