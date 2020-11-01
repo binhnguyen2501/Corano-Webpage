@@ -351,6 +351,28 @@ header{
       opacity: 1;
     }
 }
+@keyframes slideIn {
+    0% {
+      transform: translateY(10rem);
+      opacity: 0;
+    }
+    30% {
+      transform: translateY(5rem);
+      opacity: .3;
+    }
+    50% {
+        transform: translateY(3rem);
+        opacity: .5;
+      }
+    70% {
+        transform: translateY(1rem);
+        opacity: .7;
+      }
+    100% {
+      transform: translateY(0rem);
+      opacity: 1;
+    }
+}
 /**********/
 /*Banner Page*/
 .page__banner{
@@ -461,13 +483,13 @@ header{
     z-index: 9998;
     visibility: hidden;
 }
-.backHomeBtn__icon{
+.backHomeBtn_Fixed{
+    visibility: visible;
     position: fixed;
     bottom: 2.5rem;
     right: 1rem;
-}
-.backHomeBtn_Fixed{
-    visibility: visible;
+    animation: slideIn .4s ease-out;
+    transition: animation .6s ease-in;
 }
 .peBtn__goUp{
     font-size: 2rem;
