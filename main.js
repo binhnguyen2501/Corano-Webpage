@@ -56,6 +56,8 @@ const mainNavbar_wrapper = document.querySelector('.navbar--wrapper');
 const mainNavbar_title = document.querySelector('.main-title');
 const mainNavbar_title__img = document.querySelector('.main-title img')
 const mainNavbar_main = document.querySelector('.navbar--main');
+
+const backHomeBtn = document.querySelector('.backHomeBtn');
 window.addEventListener('scroll' , function(){
     console.log(window.scrollY)
     if(window.scrollY >= navbarHeight){
@@ -66,6 +68,9 @@ window.addEventListener('scroll' , function(){
         mainNavbar_title__img.style.cssText = ' width: 47.5%;'
         mainNavbar_main.style.cssText = 'flex: 1;' + 'float: left;'
         mainNavbar_wrapper.style.cssText = 'width: 25%' + 'flex: 0;' + 'float: right;' + 'margin-right: 12rem;'
+
+        backHomeBtn.classList.add('backHomeBtn_Fixed');
+
     }
     else{
         userNavbar.classList.remove('user_navbarFixed');
@@ -75,6 +80,8 @@ window.addEventListener('scroll' , function(){
         mainNavbar_title__img.style.cssText = ' width: 45%;'
         mainNavbar_main.style.cssText = 'flex: .8;'
         mainNavbar_wrapper.style.cssText = 'flex: .18;'
+
+        backHomeBtn.classList.remove('backHomeBtn_Fixed');
     }
 });
 
