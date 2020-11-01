@@ -453,7 +453,6 @@ header{
 .content{
     height: 2000px;
 }
-
 /*Go-Up Btn*/
 .backHomeBtn{
     position: absolute;
@@ -477,3 +476,4 @@ header{
     background: rgba(0,0,0,0.8);
     border-radius: 100%;
 }
+/**********/

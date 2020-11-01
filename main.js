@@ -49,6 +49,7 @@ page__banner.addEventListener('mouseleave', function(){
 /*Sticky Navbar*/
 const height = document.querySelector('header')
 const navbarHeight = height.clientHeight;
+
 const userNavbar = document.querySelector('.header__navbar--user');
 const mainNavbar = document.querySelector('.header__navbar--main');
 const mainNavbar_search = document.querySelector('.navbar--search');
@@ -59,7 +60,6 @@ const mainNavbar_main = document.querySelector('.navbar--main');
 
 const backHomeBtn = document.querySelector('.backHomeBtn');
 window.addEventListener('scroll' , function(){
-    console.log(window.scrollY)
     if(window.scrollY >= navbarHeight){
         userNavbar.classList.add('user_navbarFixed');
         mainNavbar.classList.add('main_navbarFixed');
@@ -70,7 +70,6 @@ window.addEventListener('scroll' , function(){
         mainNavbar_wrapper.style.cssText = 'width: 25%' + 'flex: 0;' + 'float: right;' + 'margin-right: 12rem;'
 
         backHomeBtn.classList.add('backHomeBtn_Fixed');
-
     }
     else{
         userNavbar.classList.remove('user_navbarFixed');
