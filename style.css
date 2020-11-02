@@ -503,16 +503,21 @@ header{
     bottom: 3rem;
     right: 1rem;
     z-index: 9997;
+    opacity: 0;
 }
 .backHomeBtn_FixedIn{
     visibility: visible;
+    opacity: 1;
     position: fixed;
     bottom: 2.5rem;
     right: 1rem;
     animation: slideIn .7s ease-out;
-    transition: animation .7s ease-out;
+    transition: animation .7s ease-out,
+                visibility .5s,
+                opacity .5s;
 }
 .backHomeBtn_FixedOut{
+    opacity: 0;
     position: fixed;
     bottom: 2.5rem;
     right: 1rem;
