@@ -55,7 +55,7 @@ const mainNavbar = document.querySelector('.header__navbar--main');
 const mainNavbar_search = document.querySelector('.navbar--search');
 const mainNavbar_wrapper = document.querySelector('.navbar--wrapper');
 const mainNavbar_title = document.querySelector('.main-title');
-const mainNavbar_title__img = document.querySelector('.main-title img')
+const mainNavbar_title__img = document.querySelector('.main-title img');
 const mainNavbar_main = document.querySelector('.navbar--main');
 
 const backHomeBtn = document.querySelector('.backHomeBtn');

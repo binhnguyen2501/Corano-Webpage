@@ -513,8 +513,12 @@ header{
     transition: animation .7s ease-out;
 }
 .backHomeBtn_FixedOut{
+    position: fixed;
+    bottom: 2.5rem;
+    right: 1rem;
     animation: slideOut .7s ease;
     transition: animation .7s ease;
+    transform: translateY(-200rem);
 }
 .peBtn__goUp{
     font-size: 2rem;
