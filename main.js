@@ -72,7 +72,7 @@ window.addEventListener('scroll' , function(){
         backHomeBtn.classList.add('backHomeBtn_FixedIn');
         backHomeBtn.classList.remove('backHomeBtn_FixedOut');
     }
-    else{
+    else if(window.scrollY < navbarHeight){
         userNavbar.classList.remove('user_navbarFixed');
         mainNavbar.classList.remove('main_navbarFixed');
         mainNavbar_search.style.cssText = 'display: static';
