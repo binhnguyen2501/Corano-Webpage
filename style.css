@@ -502,7 +502,7 @@ header{
     position: absolute;
     bottom: 3rem;
     right: 1rem;
-    z-index: 9998;
+    z-index: 9997;
 }
 .backHomeBtn_FixedIn{
     visibility: visible;
