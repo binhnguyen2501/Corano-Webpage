@@ -373,6 +373,28 @@ header{
       opacity: 1;
     }
 }
+@keyframes slideOut {
+    0% {
+      transform: translateY(0rem);
+      opacity: 0;
+    }
+    30% {
+      transform: translateY(1rem);
+      opacity: .3;
+    }
+    50% {
+        transform: translateY(3rem);
+        opacity: .5;
+      }
+    70% {
+        transform: translateY(5rem);
+        opacity: .7;
+      }
+    100% {
+      transform: translateY(10rem);
+      opacity: 1;
+    }
+}
 /**********/
 /*Banner Page*/
 .page__banner{
@@ -481,15 +503,18 @@ header{
     bottom: 3rem;
     right: 1rem;
     z-index: 9998;
-    visibility: hidden;
 }
-.backHomeBtn_Fixed{
+.backHomeBtn_FixedIn{
     visibility: visible;
     position: fixed;
     bottom: 2.5rem;
     right: 1rem;
     animation: slideIn .7s ease-out;
     transition: animation .7s ease-out;
+}
+.backHomeBtn_FixedOut{
+    animation: slideOut .7s ease;
+    transition: animation .7s ease;
 }
 .peBtn__goUp{
     font-size: 2rem;

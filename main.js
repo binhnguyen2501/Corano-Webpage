@@ -65,11 +65,12 @@ window.addEventListener('scroll' , function(){
         mainNavbar.classList.add('main_navbarFixed');
         mainNavbar_search.style.cssText = 'display: none'
         mainNavbar_title.style.cssText = 'margin-left: 12rem;' + 'width: 13.66666667%' + 'flex: 0'
-        mainNavbar_title__img.style.cssText = ' width: 47.5%;'
+        mainNavbar_title__img.style.cssText = 'width: 47.5%;'
         mainNavbar_main.style.cssText = 'flex: 1;' + 'float: left;'
         mainNavbar_wrapper.style.cssText = 'width: 25%' + 'flex: 0;' + 'float: right;' + 'margin-right: 12rem;'
 
-        backHomeBtn.classList.add('backHomeBtn_Fixed');
+        backHomeBtn.classList.add('backHomeBtn_FixedIn');
+        backHomeBtn.classList.remove('backHomeBtn_FixedOut');
     }
     else{
         userNavbar.classList.remove('user_navbarFixed');
@@ -80,7 +81,8 @@ window.addEventListener('scroll' , function(){
         mainNavbar_main.style.cssText = 'flex: .8;'
         mainNavbar_wrapper.style.cssText = 'flex: .18;'
 
-        backHomeBtn.classList.remove('backHomeBtn_Fixed');
+        backHomeBtn.classList.remove('backHomeBtn_FixedIn');
+        backHomeBtn.classList.add('backHomeBtn_FixedOut');
     }
 });
 
