@@ -63,11 +63,11 @@ window.addEventListener('scroll' , function(){
     if(window.scrollY >= navbarHeight){
         userNavbar.classList.add('user_navbarFixed');
         mainNavbar.classList.add('main_navbarFixed');
-        mainNavbar_search.style.cssText = 'display: none'
-        mainNavbar_title.style.cssText = 'margin-left: 12rem;' + 'width: 13.66666667%' + 'flex: 0'
-        mainNavbar_title__img.style.cssText = 'width: 47.5%;'
-        mainNavbar_main.style.cssText = 'flex: 1;' + 'float: left;'
-        mainNavbar_wrapper.style.cssText = 'width: 25%' + 'flex: 0;' + 'float: right;' + 'margin-right: 12rem;'
+        mainNavbar_search.style.cssText = 'display: none';
+        mainNavbar_title.style.cssText = 'margin-left: 12rem;' + 'width: 13.66666667%' + 'flex: 0';
+        mainNavbar_title__img.style.cssText = 'width: 47.5%;';
+        mainNavbar_main.style.cssText = 'flex: 1;' + 'float: left;';
+        mainNavbar_wrapper.style.cssText = 'width: 25%' + 'flex: 0;' + 'float: right;' + 'margin-right: 12rem;';
 
         backHomeBtn.classList.add('backHomeBtn_FixedIn');
         backHomeBtn.classList.remove('backHomeBtn_FixedOut');
@@ -75,11 +75,11 @@ window.addEventListener('scroll' , function(){
     else{
         userNavbar.classList.remove('user_navbarFixed');
         mainNavbar.classList.remove('main_navbarFixed');
-        mainNavbar_search.style.cssText = 'display: static'
-        mainNavbar_title.style.cssText = 'margin-left: 7.5rem;' + 'flex: .28;'
-        mainNavbar_title__img.style.cssText = ' width: 45%;'
-        mainNavbar_main.style.cssText = 'flex: .8;'
-        mainNavbar_wrapper.style.cssText = 'flex: .18;'
+        mainNavbar_search.style.cssText = 'display: static';
+        mainNavbar_title.style.cssText = 'margin-left: 7.5rem;' + 'flex: .28;';
+        mainNavbar_title__img.style.cssText = ' width: 45%;';
+        mainNavbar_main.style.cssText = 'flex: .8;';
+        mainNavbar_wrapper.style.cssText = 'flex: .18;';
 
         backHomeBtn.classList.remove('backHomeBtn_FixedIn');
         backHomeBtn.classList.add('backHomeBtn_FixedOut');
