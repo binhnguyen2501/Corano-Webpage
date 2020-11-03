@@ -466,20 +466,17 @@ header{
     white-space: nowrap;
 }
 /**********/
-.content{
-    height: 2000px;
-}
 /*Go-Up Btn*/
 .backHomeBtn{
     position: fixed;
-    bottom: 3rem;
+    bottom: 2.6rem;
     right: 1rem;
     z-index: 9997;
 }
 .backHomeBtn_FixedIn{
     visibility: visible;
     position: fixed;
-    bottom: 3rem;
+    bottom: 2.6rem;
     right: 1rem;
     animation: slideIn .7s ease-out;
     transition: animation .7s ease-out;
@@ -496,3 +493,68 @@ header{
     border-radius: 100%;
 }
 /**********/
+/*Store Hastag*/
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #efefef;
+}
+.store__Hastag{
+    position: relative;
+    text-align: center;
+    width: 1100px;
+    height: 60px;
+}
+.content_Hastag p a{
+    color: rgb(194, 153, 88);
+    text-decoration: none;
+}
+.content_Hastag p{
+    font-size: .9em;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: .025em;
+}
+.content_Hastag .main--content{
+    margin-bottom: 0.6em;
+}
+/**********/
+/*Store Work*/
+.container_Work{
+    width: 100%;
+    padding-right: 11rem;
+    padding-left: 11rem;
+    margin-bottom: 5rem;
+    display: flex;
+}
+.store__Work{
+    margin-right: 10px;
+    width: 25%;
+}
+.store__Work-inner{
+    display: flex;
+}
+.work--icon{
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: rgb(194, 153, 88);
+}
+.work--content h4{
+    font-size: 1em;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0 0 10px 0;
+    text-transform: capitalize;
+    color: #222222;
+}
+.work--content h6{
+    font-size: 1em;
+    margin: 0;
+    font-weight: 400;
+    color: #555555;
+}
