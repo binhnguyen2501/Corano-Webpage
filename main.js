@@ -59,30 +59,43 @@ const mainNavbar_title__img = document.querySelector('.main-title img');
 const mainNavbar_main = document.querySelector('.navbar--main');
 
 const backHomeBtn = document.querySelector('.backHomeBtn');
+let status_backHomeBtn = false;
 window.addEventListener('scroll' , function(){
-    if(window.scrollY >= navbarHeight){
-        userNavbar.classList.add('user_navbarFixed');
-        mainNavbar.classList.add('main_navbarFixed');
-        mainNavbar_search.style.cssText = 'display: none';
-        mainNavbar_title.style.cssText = 'margin-left: 12rem;' + 'width: 13.66666667%' + 'flex: 0';
-        mainNavbar_title__img.style.cssText = 'width: 47.5%;';
-        mainNavbar_main.style.cssText = 'flex: 1;' + 'float: left;';
-        mainNavbar_wrapper.style.cssText = 'width: 25%' + 'flex: 0;' + 'float: right;' + 'margin-right: 12rem;';
-
-        backHomeBtn.classList.add('backHomeBtn_FixedIn');
-        backHomeBtn.classList.remove('backHomeBtn_FixedOut');
+    if(status_backHomeBtn == true){
+        if(window.scrollY >= navbarHeight){
+            userNavbar.classList.add('user_navbarFixed');
+            mainNavbar.classList.add('main_navbarFixed');
+            mainNavbar_search.style.cssText = 'display: none';
+            mainNavbar_title.style.cssText = 'margin-left: 12rem;' + 'width: 13.66666667%' + 'flex: 0';
+            mainNavbar_title__img.style.cssText = 'width: 47.5%;';
+            mainNavbar_main.style.cssText = 'flex: 1;' + 'float: left;';
+            mainNavbar_wrapper.style.cssText = 'width: 25%' + 'flex: 0;' + 'float: right;' + 'margin-right: 12rem;';
+    
+            backHomeBtn.classList.remove('d-none');
+            backHomeBtn.classList.add('backHomeBtn_FixedIn');
+            setTimeout(function(){
+                backHomeBtn.classList.remove('backHomeBtn_FixedIn');
+            },700);
+            status_backHomeBtn = false;
+        }
     }
-    else if(window.scrollY < navbarHeight){
-        userNavbar.classList.remove('user_navbarFixed');
-        mainNavbar.classList.remove('main_navbarFixed');
-        mainNavbar_search.style.cssText = 'display: static';
-        mainNavbar_title.style.cssText = 'margin-left: 7.5rem;' + 'flex: .28;';
-        mainNavbar_title__img.style.cssText = ' width: 45%;';
-        mainNavbar_main.style.cssText = 'flex: .8;';
-        mainNavbar_wrapper.style.cssText = 'flex: .18;';
-
-        backHomeBtn.classList.remove('backHomeBtn_FixedIn');
-        backHomeBtn.classList.add('backHomeBtn_FixedOut');
+    else {
+        if(window.scrollY < navbarHeight){
+            userNavbar.classList.remove('user_navbarFixed');
+            mainNavbar.classList.remove('main_navbarFixed');
+            mainNavbar_search.style.cssText = 'display: static';
+            mainNavbar_title.style.cssText = 'margin-left: 7.5rem;' + 'flex: .28;';
+            mainNavbar_title__img.style.cssText = ' width: 45%;';
+            mainNavbar_main.style.cssText = 'flex: .8;';
+            mainNavbar_wrapper.style.cssText = 'flex: .18;';
+    
+            backHomeBtn.classList.add('backHomeBtn_FixedOut');
+            setTimeout(function(){
+                backHomeBtn.classList.remove('backHomeBtn_FixedOut');
+                backHomeBtn.classList.add('d-none');
+            },700);
+            status_backHomeBtn = true;
+        }
     }
 });
 
