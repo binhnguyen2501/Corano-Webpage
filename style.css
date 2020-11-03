@@ -531,16 +531,18 @@ header{
     display: flex;
 }
 .store__Work{
-    margin-right: 10px;
     width: 25%;
 }
 .store__Work-inner{
     display: flex;
+    padding: 0 15px;
+    justify-content: space-evenly;
 }
 .work--icon{
     font-size: 2rem;
-    margin-right: 1.5rem;
+    margin-right: 1.2rem;
     color: rgb(194, 153, 88);
+    margin-top: -.55rem;
 }
 .work--content h4{
     font-size: 1em;
@@ -558,3 +560,87 @@ header{
     color: #555555;
 }
 /**********/
+/*Store MainProduct*/
+.container_mainProduct{
+    width: 100%;
+    padding-right: 11rem;
+    padding-left: 11rem;
+    margin-bottom: 5rem;
+}
+.store__mainProduct:nth-child(1){
+    margin-bottom: 20px;
+}
+.store__mainProduct{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+.mainProduct--content{
+    position: relative;
+}
+.mainProduct---img{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+.mainProduct---text{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+}
+.text2{
+    width: 60%;
+}
+.text3{
+    left: 75%;
+}
+.mainProduct---text h6{
+    font-size: 1em;
+    line-height: 1;
+    margin: 0 0 10px 0;
+    font-weight: 400;
+    color: #888888;
+    text-transform: uppercase;
+}
+.mainProduct---text h5{
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+    color: #222222;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+}
+.mainProduct---text a{
+    display: inline-block;
+    color: #222222;
+    position: relative;
+    padding-bottom: 4px;
+    margin-top: 35px;
+    font-size: 1em;
+    text-decoration: none;
+    transition: .3s ease;
+}
+.mainProduct---text a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #222222;
+    height: 2px;
+    transition: .2s ease;
+}
+.mainProduct---text a:hover::before{
+    background: rgb(194, 153, 88);
+}
+.mainProduct---text a:hover{
+    color: rgb(194, 153, 88);
+}
+.text1,.text4{
+    text-align: right;
+}
+.text2,.text3{
+    text-align: center;
+}
