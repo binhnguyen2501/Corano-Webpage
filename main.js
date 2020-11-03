@@ -64,6 +64,7 @@ const blog_menu__list = document.querySelector('.navbar--main_blog .blog_menu');
 
 const backHomeBtn = document.querySelector('.backHomeBtn');
 let status_backHomeBtn = false;
+
 window.addEventListener('scroll' , function(){
     if(status_backHomeBtn == false){
         if(window.scrollY >= navbarHeight){
