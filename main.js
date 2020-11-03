@@ -39,12 +39,12 @@ const sliderBtn_prev = document.getElementById('page__banner--slider-Btn1');
 const sliderBtn_next = document.getElementById('page__banner--slider-Btn2');
 const page__banner = document.querySelector('.page__banner');
 page__banner.addEventListener('mouseover', function(){
-    sliderBtn_prev.style.cssText = "visibility: visible;" + "opacity:1;" + "transition: all .3s ease-out"
-    sliderBtn_next.style.cssText = "visibility: visible;" + "opacity:1;" + "transition: all .3s ease-out"
+    sliderBtn_prev.style.cssText = "visibility: visible;" + "opacity:1;" + "transition: all .3s ease-out;"
+    sliderBtn_next.style.cssText = "visibility: visible;" + "opacity:1;" + "transition: all .3s ease-out;"
 });
 page__banner.addEventListener('mouseleave', function(){
-    sliderBtn_prev.style.cssText = "visibility: hidden;" + "opacity:0;" + "transition: all .3s ease-out"
-    sliderBtn_next.style.cssText = "visibility: hidden;" + "opacity:0;" + "transition: all .3s ease-out"
+    sliderBtn_prev.style.cssText = "visibility: hidden;" + "opacity:0;" + "transition: all .3s ease-out;"
+    sliderBtn_next.style.cssText = "visibility: hidden;" + "opacity:0;" + "transition: all .3s ease-out;"
 });
 /*Sticky Navbar*/
 const height = document.querySelector('header')
@@ -87,11 +87,11 @@ window.addEventListener('scroll' , function(){
             status_backHomeBtn = false;
         }
     }
-    else{
+    else {
         if(window.scrollY < navbarHeight){
             userNavbar.classList.remove('user_navbarFixed');
             mainNavbar.classList.remove('main_navbarFixed');
-            mainNavbar_search.style.cssText = 'display: static';
+            mainNavbar_search.style.cssText = 'display: static;';
             mainNavbar_title.style.cssText = 'margin-left: 7.5rem;' + 'flex: .28;';
             mainNavbar_title__img.style.cssText = ' width: 45%;';
             mainNavbar_main.style.cssText = 'flex: .8;';
