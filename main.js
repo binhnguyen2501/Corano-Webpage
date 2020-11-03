@@ -118,13 +118,13 @@ function AutoHastag(){
     var i;
     var x = document.querySelectorAll('.content_Hastag');
     for (i = 0; i < x.length; i++){
-        x[i].style.cssText = 'display: none;'+ 'position: absolute;' + 'top: -50px;' + 'left: 0px;' + 'z-index: 5;' + 'opacity: 0;';
+        x[i].style.cssText = 'display: none;';
     }
     index++;
     if (index > x.length){
         index = 1
     }    
-    x[index-1].style.cssText = 'display: block;' + 'position: absolute;' + 'top: 0px;' + 'left: 0px;' + 'z-index: 6;' + 'opacity: 1;';
+    x[index-1].style.cssText = 'display: block;';
     setTimeout(AutoHastag, 2500);    
 }
 
