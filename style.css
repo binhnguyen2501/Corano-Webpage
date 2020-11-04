@@ -370,25 +370,106 @@ header{
 /**********/
 /*Banner Page*/
 .page__banner{
-    overflow: hidden;
     position: relative;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 35rem;
 }
 .page__banner--slider{
-   display: flex;
+    position: absolute;
+	height: 100%;
+	width: 100%;
 }
-.banner--slider{
+.page__banner--slider ul{
+    height: 100%;
     width: 100%;
-    flex-shrink: 0!important;
     position: relative;
 }
-.banner--slider img{
+.page__banner--slider ul li{
+	list-style: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	transition: 0.4s;
+	opacity: 0;
+}
+.page__banner--slider ul li.active{
+    opacity: 1;
+}
+.page__banner--slider ul li .slider{
+    position: relative;
     width: 100%;
     height: 100%;
+}
+.slider1-img,
+.slider2-img,
+.slider3-img{
+    width: 100%;
+}
+.bienMatKhiNext {
+    animation: animation1 1s forwards;
+}
+@keyframes animation1 {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+.hienKhiNext {
+    animation: animation2 1s forwards;
+}
+@keyframes animation2 {
+    from {
+        transform: scale(.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.bienMatKhiPrev {
+    animation: ani1 1s forwards;
+}
+
+@keyframes ani1 {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(.8);
+        opacity: 0;
+    }
+}
+
+.hienKhiPrev {
+    animation: ani2 1s forwards;
+}
+
+@keyframes ani2 {
+    from {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.chuyenslide{
+    position: static;
 }
 #page__banner--slider-Btn1,
 #page__banner--slider-Btn2{
     position: absolute;
-    top: 50%;
+    margin-top: 17%;
     border: none;
     visibility: hidden;
     opacity: 0;
@@ -499,7 +580,7 @@ header{
     padding-right: 15px;
     padding-left: 15px;
     margin-top: 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     padding-bottom: 20px;
     border-bottom: 1px solid #efefef;
 }

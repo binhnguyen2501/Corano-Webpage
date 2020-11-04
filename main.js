@@ -1,39 +1,146 @@
 /*Slide banner*/
-const page__banner_slider = document.querySelector('.page__banner--slider');
-const banner_sliderImg = document.querySelectorAll('.banner--slider img');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-let counter = 1;
-const sizeImg = banner_sliderImg[counter].clientWidth;
-page__banner_slider.style.transform = "translateX(" + (-sizeImg * counter) + "px)" ;
-nextBtn.addEventListener('click' , function(){
-    if(counter >= banner_sliderImg.length - 1){
-        return;
-    }
-    page__banner_slider.style.transition = "transform .4s ease-in-out";
-    counter++;
-    page__banner_slider.style.transform = "translateX(" + (-sizeImg * counter) + "px)" ;
+
+
+
+document.addEventListener('DOMContentLoaded', function(){
+    var slides = document.querySelectorAll('.page__banner--slider ul li');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+    var chiSoHienTai = 0,
+        soLuongSlide = slides.length,
+        trangThai = 'dangDungYen';
+
+    var timeDelay = setInterval(function(){
+        AutoSlide();
+    },4000);
+
+    nextBtn.addEventListener('click', function(){
+        clearInterval(timeDelay);
+         // kiểm tra trạng thái
+        if (trangThai == 'dangChuyenDong'){ // nếu đang chuyển động k cho next
+            return false;
+        }
+        trangThai = 'dangChuyenDong';
+        trangThai2ChuyenDong = 0;
+
+        // xác định chỉ số phần tử tiếp theo dựa trên phần tử hiện tại   
+        var phanTuHienTai = slides[chiSoHienTai]; // lấy ra phần tử hiện tại
+        if (chiSoHienTai < soLuongSlide - 1) { // chưa đến cuối -> thêm 1 vị trí
+            chiSoHienTai += 1;
+        }
+        else { // khi đến slide cuối cho chỉ số về lại slide đầu
+            chiSoHienTai = 0;
+        }
+        var phanTuTiepTheo = slides[chiSoHienTai];   
+        
+         // check chuyển động kết thúc
+        var xuLyHienTaiKetThucCD = function (){
+            this.classList.remove('active');
+            this.classList.remove('bienMatKhiNext'); 
+            trangThai2ChuyenDong++;
+            if (trangThai2ChuyenDong == 2) { // sau khi chuyển động xong chuyển trạng thái về đứng yên và có thể bấm tiếp tục
+                trangThai = 'dangDungYen';
+            }       
+        }
+        phanTuHienTai.addEventListener('webkitAnimationEnd', xuLyHienTaiKetThucCD);
+
+        var xuLyTiepTheoKetThucCD = function (){
+            this.classList.add('active');
+            this.classList.remove('hienKhiNext');
+            trangThai2ChuyenDong++;
+            if (trangThai2ChuyenDong == 2) { // sau khi chuyển động xong chuyển trạng thái về đứng yên và có thể bấm tiếp tục
+                trangThai = 'dangDungYen';
+            }   
+        }
+        phanTuTiepTheo.addEventListener('webkitAnimationEnd', xuLyTiepTheoKetThucCD);
+
+        // tạo chuyển động sau khi xác định 2 phần tử
+        phanTuHienTai.classList.add('bienMatKhiNext');
+        phanTuTiepTheo.classList.add('hienKhiNext');
+
+        //  trangThai = 'dangDungYen';
+    });
+
+    prevBtn.addEventListener('click',function(){
+        clearInterval(timeDelay);
+        
+        // kiểm tra trạng thái
+        if (trangThai == 'dangChuyenDong') { // nếu đang chuyển động k cho next
+            return false;
+        }
+        trangThai = 'dangChuyenDong';
+        trangThai2ChuyenDong = 0;
+
+        var phanTuHienTai = slides[chiSoHienTai]; // lấy ra phần tử hiện tại
+        if (chiSoHienTai > 0) { // nếu lớn hơn 0 là chưa về đầu -> trừ đi 1 vị trí
+            chiSoHienTai--;
+        }
+        else { // đang ở đầu nên k lùi được nữa -> cho vị trí bằng vị trí cuối cùng của slide
+            chiSoHienTai = soLuongSlide - 1;
+        }
+        var phanTuTiepTheo = slides[chiSoHienTai];
+    
+        // check chuyển động kết thúc
+        var xuLyHienTaiKetThucCD = function (){
+            this.classList.remove('active');
+            this.classList.remove('bienMatKhiPrev'); 
+            trangThai2ChuyenDong++;
+            if (trangThai2ChuyenDong == 2) { // sau khi chuyển động xong chuyển trạng thái về đứng yên và có thể bấm tiếp tục
+                trangThai = 'dangDungYen';
+            }          
+        }
+        phanTuHienTai.addEventListener('webkitAnimationEnd', xuLyHienTaiKetThucCD);
+
+        var xuLyTiepTheoKetThucCD = function (){
+            this.classList.add('active');
+            this.classList.remove('hienKhiPrev');
+            trangThai2ChuyenDong++;
+            if (trangThai2ChuyenDong == 2) { // sau khi chuyển động xong chuyển trạng thái về đứng yên và có thể bấm tiếp tục
+                trangThai = 'dangDungYen';
+            }   
+        }
+        phanTuTiepTheo.addEventListener('webkitAnimationEnd', xuLyTiepTheoKetThucCD);
+
+        // tạo chuyển động sau khi xác định 2 phần tử
+        phanTuHienTai.classList.add('bienMatKhiPrev');
+        phanTuTiepTheo.classList.add('hienKhiPrev');
+    });
+
+
+
+
+
+    // xử lý tự động chuyển slide
+    function AutoSlide(){		
+        // b1: xem slide nào đang hiển thị
+        var vitrislide = 0;
+        var slideHienTai = document.querySelector('.page__banner--slider ul .active');
+        // lấy ra vị trí slide đang đứng
+        for (vitrislide = 0; slideHienTai = slideHienTai.previousElementSibling; vitrislide++){
+            if(vitrislide < (slides.length - 1)) { // nếu chưa đến slide cuối thì vẫn chạy bt
+                // ẩn hết các slide
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].classList.remove('active');
+                }
+                // cho hiển thị slide đang chọn
+                slides[vitrislide].nextElementSibling.classList.add('active');
+            }
+            else{ // slide đến cuối thì cho quay lại hiển thị slide đầu tiền
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].classList.remove('active');
+                }
+                // cho hiển thị slide đang chọn
+                slides[0].classList.add('active');
+            }		
+            console.log("slide dang o vi tri " + vitrislide);
+        };
+    };
+
+   
 });
-prevBtn.addEventListener('click' , function(){
-    if(counter <= 0) {
-        return;
-    }
-    page__banner_slider.style.transition = "transform .4s ease-in-out";
-    counter--;
-    page__banner_slider.style.transform = "translateX(" + (-sizeImg * counter) + "px)" ;
-});
-page__banner_slider.addEventListener('transitionend' , function(){
-    if(banner_sliderImg[counter].id === 'lastClone'){
-        page__banner_slider.style.transition = "none";
-        counter = banner_sliderImg.length - 2;
-        page__banner_slider.style.transform = "translateX(" + (-sizeImg * counter) + "px)" ;
-    }
-    if(banner_sliderImg[counter].id === 'fristClone'){
-        page__banner_slider.style.transition = "none";
-        counter = banner_sliderImg.length - counter;
-        page__banner_slider.style.transform = "translateX(" + (-sizeImg * counter) + "px)" ;
-    }
-});
+
+
 /*Slider banner button*/
 const sliderBtn_prev = document.getElementById('page__banner--slider-Btn1');
 const sliderBtn_next = document.getElementById('page__banner--slider-Btn2');
