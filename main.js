@@ -8,19 +8,24 @@ document.addEventListener('DOMContentLoaded', function(){
         soLuongSlide = slides.length,
         trangThai = 'dangDungYen';
 
-    var timeDelay = setInterval(function(){
-        AutoSlide();
-    },4000);
-
-    nextBtn.addEventListener('click', function(){
+    let timeDelay = setInterval(AutoSlide,4000);
+    // xử lý tự động chuyển slide
+    function AutoSlide(){		
+        NextSlide();
+    };
+    function resetAutoSlide(){
         clearInterval(timeDelay);
-         // kiểm tra trạng thái
+        timeDelay = setInterval(AutoSlide,4000);
+
+    }
+    function NextSlide(){
+        // kiểm tra trạng thái
         if (trangThai == 'dangChuyenDong'){ // nếu đang chuyển động k cho next
             return false;
         }
         trangThai = 'dangChuyenDong';
         trangThai2ChuyenDong = 0;
-
+    
         // xác định chỉ số phần tử tiếp theo dựa trên phần tử hiện tại   
         var phanTuHienTai = slides[chiSoHienTai]; // lấy ra phần tử hiện tại
         if (chiSoHienTai < soLuongSlide - 1) { // chưa đến cuối -> thêm 1 vị trí
@@ -41,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function(){
             }       
         }
         phanTuHienTai.addEventListener('webkitAnimationEnd', xuLyHienTaiKetThucCD);
-
+    
         var xuLyTiepTheoKetThucCD = function (){
             this.classList.add('active');
             this.classList.remove('hienKhiNext');
@@ -51,17 +56,14 @@ document.addEventListener('DOMContentLoaded', function(){
             }   
         }
         phanTuTiepTheo.addEventListener('webkitAnimationEnd', xuLyTiepTheoKetThucCD);
-
+    
         // tạo chuyển động sau khi xác định 2 phần tử
         phanTuHienTai.classList.add('bienMatKhiNext');
         phanTuTiepTheo.classList.add('hienKhiNext');
-
+    
         //  trangThai = 'dangDungYen';
-    });
-
-    prevBtn.addEventListener('click',function(){
-        clearInterval(timeDelay);
-        
+    };
+    function PrevSlide(){
         // kiểm tra trạng thái
         if (trangThai == 'dangChuyenDong') { // nếu đang chuyển động k cho next
             return false;
@@ -102,39 +104,19 @@ document.addEventListener('DOMContentLoaded', function(){
         // tạo chuyển động sau khi xác định 2 phần tử
         phanTuHienTai.classList.add('bienMatKhiPrev');
         phanTuTiepTheo.classList.add('hienKhiPrev');
-    });
-
-
-
-
-
-    // xử lý tự động chuyển slide
-    function AutoSlide(){		
-        // b1: xem slide nào đang hiển thị
-        var slideHienTai = document.querySelector('.page__banner--slider ul .active');
-        // lấy ra vị trí slide đang đứng
-        for (var vitrislide = 0; slideHienTai = slideHienTai.previousElementSibling; vitrislide++){
-            if(vitrislide < (slides.length - 1)) { // nếu chưa đến slide cuối thì vẫn chạy bt
-                // ẩn hết các slide
-                for (var i = 0; i < slides.length; i++) {
-                    slides[i].classList.remove('active');
-                }
-                // cho hiển thị slide đang chọn
-                slides[vitrislide].nextElementSibling.classList.add('active');
-            }
-            else{ // slide đến cuối thì cho quay lại hiển thị slide đầu tiền
-                for (var i = 0; i < slides.length; i++) {
-                    slides[i].classList.remove('active');
-                }
-                // cho hiển thị slide đang chọn
-                slides[0].classList.add('active');
-            }		
-            console.log("slide dang o vi tri " + vitrislide);
-        };
     };
-
-   
+    nextBtn.addEventListener('click', function(){
+        NextSlide();
+        resetAutoSlide();
+    });
+    prevBtn.addEventListener('click',function(){
+        PrevSlide();
+        resetAutoSlide();
+    });   
 });
+
+
+
 /*Slider banner button*/
 const sliderBtn_prev = document.getElementById('page__banner--slider-Btn1');
 const sliderBtn_next = document.getElementById('page__banner--slider-Btn2');
