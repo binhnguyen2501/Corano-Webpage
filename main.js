@@ -1,7 +1,4 @@
 /*Slide banner*/
-
-
-
 document.addEventListener('DOMContentLoaded', function(){
     var slides = document.querySelectorAll('.page__banner--slider ul li');
     const prevBtn = document.querySelector('.prev');
@@ -114,10 +111,9 @@ document.addEventListener('DOMContentLoaded', function(){
     // xử lý tự động chuyển slide
     function AutoSlide(){		
         // b1: xem slide nào đang hiển thị
-        var vitrislide = 0;
         var slideHienTai = document.querySelector('.page__banner--slider ul .active');
         // lấy ra vị trí slide đang đứng
-        for (vitrislide = 0; slideHienTai = slideHienTai.previousElementSibling; vitrislide++){
+        for (var vitrislide = 0; slideHienTai = slideHienTai.previousElementSibling; vitrislide++){
             if(vitrislide < (slides.length - 1)) { // nếu chưa đến slide cuối thì vẫn chạy bt
                 // ẩn hết các slide
                 for (var i = 0; i < slides.length; i++) {
@@ -139,8 +135,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
    
 });
-
-
 /*Slider banner button*/
 const sliderBtn_prev = document.getElementById('page__banner--slider-Btn1');
 const sliderBtn_next = document.getElementById('page__banner--slider-Btn2');

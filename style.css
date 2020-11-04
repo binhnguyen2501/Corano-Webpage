@@ -496,18 +496,66 @@ header{
     top: 168px;
     left: 324px;
     font-family: 'Lato';
+    opacity: 0;
+}
+.page__banner--slider ul li.active .slider1-Content{
+    opacity: 0;
+    animation: captionText .5s ease forwards;
+    animation-delay: .1s;
 }
 .slider2-Content{
     position: absolute;
     top: 212px;
     left: 846px;
     font-family: 'Lato';
+    opacity: 0;
+}
+.page__banner--slider ul li.active .slider2-Content{
+    opacity: 0;
+    animation: captionText1 .5s ease forwards;
+    animation-delay: .1s;
 }
 .slider3-Content{
     position: absolute;
     top: 211px;
     left: 324px;
     font-family: 'Lato';
+    opacity: 0;
+}
+.page__banner--slider ul li.active .slider3-Content{
+    opacity: 0;
+    animation: captionText .5s ease forwards;
+    animation-delay: .1s;
+}
+@keyframes captionText{
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes captionText1{
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes captionBtn{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 .slider--Btn{
     background: rgb(194, 153, 88);
@@ -523,6 +571,11 @@ header{
     text-align: left;
     margin-top: 1rem;
     transition: all .5s ease-out;
+    opacity: 0;
+}
+.page__banner--slider ul li.active .slider--Btn{
+    animation: captionBtn .5s ease forwards;
+    animation-delay: .2s;
 }
 .slider--Btn:hover{
     background: black;
