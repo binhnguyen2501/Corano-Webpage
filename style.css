@@ -625,7 +625,7 @@ header{
     margin-top: 35px;
     font-size: 1em;
     text-decoration: none;
-    transition: .3s ease;
+    transition: .5s ease;
 }
 .mainProduct---text a::before{
     content: '';
@@ -649,3 +649,35 @@ header{
 .text2,.text3{
     text-align: center;
 }
+/**********/
+/*Store NewArrivals*/
+.container_Arrivals{
+    width: 100%;
+    padding-right: 11rem;
+    padding-left: 11rem;
+    margin-bottom: 5rem;
+}
+.store__Arrivals{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.store__Arrivals-heading{
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+}
+.store__Arrivals-heading h3 span{
+    font-size: 1.2em;
+    line-height: 1;
+    margin: 0;
+    display: block;
+    font-weight: 550;
+}
+.store__Arrivals-heading p{
+    margin: 12px 0 0;
+    font-size: 1em;
+    color: #555555;
+    letter-spacing: .025em;
+    line-height: 22px;
+    font-weight: 400;
+}
+
