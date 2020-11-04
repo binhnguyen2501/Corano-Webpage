@@ -4,8 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const prevBtn = document.querySelector('.prev');
     const nextBtn = document.querySelector('.next');
 
-    var chiSoHienTai = 0,
-        soLuongSlide = slides.length,
+    var index = 0,
         trangThai = 'dangDungYen';
 
     let timeDelay = setInterval(AutoSlide,4000);
@@ -16,8 +15,7 @@ document.addEventListener('DOMContentLoaded', function(){
     function resetAutoSlide(){
         clearInterval(timeDelay);
         timeDelay = setInterval(AutoSlide,4000);
-
-    }
+    };
     function NextSlide(){
         // kiểm tra trạng thái
         if (trangThai == 'dangChuyenDong'){ // nếu đang chuyển động k cho next
@@ -27,14 +25,14 @@ document.addEventListener('DOMContentLoaded', function(){
         trangThai2ChuyenDong = 0;
     
         // xác định chỉ số phần tử tiếp theo dựa trên phần tử hiện tại   
-        var phanTuHienTai = slides[chiSoHienTai]; // lấy ra phần tử hiện tại
-        if (chiSoHienTai < soLuongSlide - 1) { // chưa đến cuối -> thêm 1 vị trí
-            chiSoHienTai += 1;
+        var phanTuHienTai = slides[index]; // lấy ra phần tử hiện tại
+        if (index < slides.length - 1) { // chưa đến cuối -> thêm 1 vị trí
+            index += 1;
         }
         else { // khi đến slide cuối cho chỉ số về lại slide đầu
-            chiSoHienTai = 0;
+            index = 0;
         }
-        var phanTuTiepTheo = slides[chiSoHienTai];   
+        var phanTuTiepTheo = slides[index];   
         
          // check chuyển động kết thúc
         var xuLyHienTaiKetThucCD = function (){
@@ -63,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function(){
     
         //  trangThai = 'dangDungYen';
     };
+
     function PrevSlide(){
         // kiểm tra trạng thái
         if (trangThai == 'dangChuyenDong') { // nếu đang chuyển động k cho next
@@ -71,14 +70,14 @@ document.addEventListener('DOMContentLoaded', function(){
         trangThai = 'dangChuyenDong';
         trangThai2ChuyenDong = 0;
 
-        var phanTuHienTai = slides[chiSoHienTai]; // lấy ra phần tử hiện tại
-        if (chiSoHienTai > 0) { // nếu lớn hơn 0 là chưa về đầu -> trừ đi 1 vị trí
-            chiSoHienTai--;
+        var phanTuHienTai = slides[index]; // lấy ra phần tử hiện tại
+        if (index > 0) { // nếu lớn hơn 0 là chưa về đầu -> trừ đi 1 vị trí
+            index--;
         }
         else { // đang ở đầu nên k lùi được nữa -> cho vị trí bằng vị trí cuối cùng của slide
-            chiSoHienTai = soLuongSlide - 1;
+            index = slides.length - 1;
         }
-        var phanTuTiepTheo = slides[chiSoHienTai];
+        var phanTuTiepTheo = slides[index];
     
         // check chuyển động kết thúc
         var xuLyHienTaiKetThucCD = function (){

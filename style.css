@@ -406,7 +406,7 @@ header{
 .slider3-img{
     width: 100%;
 }
-.bienMatKhiNext {
+.bienMatKhiNext{
     animation: animation1 1s forwards;
 }
 @keyframes animation1 {
@@ -419,7 +419,7 @@ header{
         opacity: 0;
     }
 }
-.hienKhiNext {
+.hienKhiNext{
     animation: animation2 1s forwards;
 }
 @keyframes animation2 {
