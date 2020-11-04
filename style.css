@@ -800,7 +800,7 @@ header{
     text-transform: capitalize;
 }
 .store__Arrivals-heading h3 span{
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1;
     margin: 0;
     display: block;
@@ -814,4 +814,46 @@ header{
     line-height: 22px;
     font-weight: 400;
 }
-
+.store__Arrivals-container{
+    background: lightgreen;
+}
+.store__Arrivals-container--inner{
+    position: relative;
+    z-index: 5;
+    background: lightpink;
+    display: block !important;
+    text-align: center !important;
+    padding: 0 17px !important;
+    margin: 0 !important;
+}
+.inner---panel{
+    list-style-type: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-bottom: 30px !important;
+}
+.panel{
+    font-size: 1.1em;
+    display: inline-block;
+    margin: 0 1.5rem;
+}
+.panel a{
+    text-decoration: none;
+}
+.inner---panelTittle{
+    color: #555555;
+}
+.inner---panelTittle:hover{
+    color: #222222;
+}
+.panelText{
+    opacity: 0;
+}
+.panelText.panelActive{
+    opacity: 1;
+}
+.inner---panelTittle.panelActive{
+    color: #222222;
+}

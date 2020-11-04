@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function(){
     
         //  trangThai = 'dangDungYen';
     };
-
     function PrevSlide(){
         // kiểm tra trạng thái
         if (trangThai == 'dangChuyenDong') { // nếu đang chuyển động k cho next
