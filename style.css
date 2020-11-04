@@ -577,11 +577,16 @@ header{
 }
 .mainProduct--content{
     position: relative;
+    overflow: hidden;
 }
 .mainProduct---img{
     display: block;
     width: 100%;
     max-width: 100%;
+    transition: .3s ease-out 0s;
+}
+.mainProduct---img:hover{
+    transform: scale(1.03);
 }
 .mainProduct---text{
     position: absolute;
