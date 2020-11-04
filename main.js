@@ -208,4 +208,9 @@ function AutoHastag(){
     x[index-1].style.cssText = 'display: block;';
     setTimeout(AutoHastag, 2500);    
 }
+/*New Arrivals*/
+var arrivalLink = document.querySelectorAll('.store__Arrivals-container--inner .panel');
+var arrivalContent = document.querySelectorAll('.innerContent---panel .panelText');
+console.log(arrivalLink)
+console.log(arrivalContent)
 
