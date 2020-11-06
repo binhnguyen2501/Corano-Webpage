@@ -1,5 +1,4 @@
 /*Slide banner*/
-
 document.addEventListener('DOMContentLoaded', function(){
     const slides = document.querySelectorAll('.page__banner--slider ul li');
     const prevBtn = document.querySelector('.prev');
@@ -145,7 +144,7 @@ const shop_menu__list = document.querySelector('.navbar--main_shop .shop_menu');
 const blog_menu__list = document.querySelector('.navbar--main_blog .blog_menu');
 
 const backHomeBtn = document.querySelector('.backHomeBtn');
-let status_backHomeBtn = false;
+var status_backHomeBtn = false;
 
 window.addEventListener('scroll' , function(){
     if(status_backHomeBtn == false){
@@ -194,38 +193,42 @@ window.addEventListener('scroll' , function(){
     }
 });
 /*Auto Hastag*/
-let index = 0;
+var index = 0;
 AutoHastag();
 function AutoHastag(){
-    let i;
     const x = document.querySelectorAll('.content_Hastag');
-    for (i = 0; i < x.length; i++){
+    for (let i = 0; i < x.length; i++){
         x[i].style.cssText = 'display: none;';
     }
-    index++;
-    if (index > x.length){
-        index = 1
-    }    
-    x[index-1].style.cssText = 'display: block;';
+    // xác định ban đầu tất cả các content đều display none
+
+    index++;//0 1 2 3 4
+
+    if (index >= x.length){ // (index >= 5)
+        index = 0;
+    }
+
+    x[index].style.cssText = 'display: block;';
     setTimeout(AutoHastag, 2500);    
 }
 /*New Arrivals*/
 const arrivalLink = document.querySelectorAll('.store__Arrivals-container--inner .inner---panel .panel');
 const arrivalContent = document.querySelectorAll('.store__Arrivals-container--innerContent .innerContent---panel .panelText');
-let index1 = 0;
-let index2 = 0;
-console.log(arrivalContent.length);
-for( index1 ; index1 < arrivalLink.length; index1++){
 
-    const panelDOM = document.querySelector('.inner---panel .panel.panel-' + (index1+1) + '');
-    const panelContentDOM = document.querySelector('.innerContent---panel .panelText.panelText-' + (index1+1) + '');
-    
-    panelDOM.addEventListener('click',function(){        
-        for( index2 = 0; index2 < arrivalLink.length ; index2++){
+for(let index1 = 0; index1 < arrivalLink.length; index1++){
+
+    const panelDOM = document.querySelector('.inner---panel .panel.panel-' + (index1+1) + '');// panelDOM = panel-1; panel-2; panel-3
+    const panelContentDOM = document.querySelector('.innerContent---panel .panelText.panelText-' + (index1+1) + '');// panelContentDOM = panelText-1; panelText-2; panelText-3
+
+    panelDOM.addEventListener('click',function(){   
+        for(let index2 = 0 ; index2 < arrivalLink.length; index2++){
             document.querySelector('.inner---panel .panel.panel-' + (index2+1) + '').classList.remove('panelActive'); 
-            document.querySelector('.innerContent---panel .panelText.panelText-' + (index2+1) + '').classList.remove('panelActive');                      
+            document.querySelector('.innerContent---panel .panelText.panelText-' + (index2+1) + '').classList.remove('panelActive');  
         };
+        // remove hết tất cả panelActive để khi click chỉ cần add panelActive rồi sau khi click tiếp theo thì lại remove hết tất cả trừ phần tử đang add (xác định ban đầu các class đều không có panelActive)
         this.classList.add('panelActive');
         panelContentDOM.classList.add('panelActive');
     })    
+
+
 }
