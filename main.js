@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', function(){
     var index = 0,
         trangThai = 'dangDungYen';
 
-    let timeDelay = setInterval(AutoSlide,4000);
+    let timeDelay = setInterval(AutoSlide,5000);
     // xử lý tự động chuyển slide
     function AutoSlide(){		
         NextSlide();
     };
     function resetAutoSlide(){
         clearInterval(timeDelay);
-        timeDelay = setInterval(AutoSlide,4000);
+        timeDelay = setInterval(AutoSlide,5000);
     };
     function NextSlide(){
         // kiểm tra trạng thái
@@ -209,8 +209,31 @@ function AutoHastag(){
     setTimeout(AutoHastag, 2500);    
 }
 /*New Arrivals*/
-var arrivalLink = document.querySelectorAll('.store__Arrivals-container--inner .panel');
+var arrivalLink = document.querySelectorAll('.store__Arrivals-container--inner ul li');
 var arrivalContent = document.querySelectorAll('.innerContent---panel .panelText');
-console.log(arrivalLink)
-console.log(arrivalContent)
+//var a = arrivalLink.length;
+//for(var b=0 ; b<a; b++){
+//    console.log(b)
+//    var d = 'panel-' + (b+1)
+//    var Link = document.querySelector('.'+d)
+//    Link.addEventListener('click',function(){
+//        Link.classList.add('panelActive')
+//    })    
+//}
 
+
+
+//$(arrivalLink).click(function(){
+//    $(this).addClass('panelActive').siblings().removeClass('panelActive');
+//    $(arrivalContent).addClass('panelActive').siblings().removeClass('panelActive');
+//})
+
+$(arrivalLink).on('click', function() {
+    var next = $('ul').find('li.panelActive').removeClass('panelActive').next('li');
+    if(next.length){ 
+        next.addClass('panelActive'); 
+    }
+    else{ 
+        $('ul').find('li').first().addClass('panelActive'); 
+    }
+ });

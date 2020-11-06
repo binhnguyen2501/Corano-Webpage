@@ -815,12 +815,11 @@ header{
     font-weight: 400;
 }
 .store__Arrivals-container{
-    background: lightgreen;
+    background: lightblue;
 }
 .store__Arrivals-container--inner{
     position: relative;
     z-index: 5;
-    background: lightpink;
     display: block !important;
     text-align: center !important;
     padding: 0 17px !important;
@@ -834,26 +833,60 @@ header{
     box-sizing: border-box;
     margin-bottom: 30px !important;
 }
-.panel{
+.inner---panel li{
     font-size: 1.1em;
     display: inline-block;
     margin: 0 1.5rem;
 }
-.panel a{
+.inner---panel li a{
     text-decoration: none;
+}
+.panelActive a::before{
+    content: '';
+    position: absolute;
+    display: block;
+    height: auto;
+    top: 100%;
+    right: 100%;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-width: inherit;
+    border-color: inherit;
+    border-style: inherit;
+    width: 100vw;
+}
+.panelActive a::after{
+    content: '';
+    position: absolute;
+    display: block;
+    height: auto;
+    top: 100%;
+    left: 100%;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-width: inherit;
+    border-color: inherit;
+    border-style: inherit;
+    width: 100vw;
 }
 .inner---panelTittle{
     color: #555555;
+    transition: all .1s ease;
 }
 .inner---panelTittle:hover{
-    color: #222222;
+    color: black;
 }
+.panelActive .inner---panelTittle{
+    color: black;
+}
+
+
 .panelText{
-    opacity: 0;
+    visibility: hidden;
+    display: block;
 }
-.panelText.panelActive{
-    opacity: 1;
-}
-.inner---panelTittle.panelActive{
-    color: #222222;
+.panelActive.panelText{
+    visibility: visible;
 }
