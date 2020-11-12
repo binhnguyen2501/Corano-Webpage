@@ -112,9 +112,6 @@ document.addEventListener('DOMContentLoaded', function(){
         resetAutoSlide();
     });   
 });
-
-
-
 /*Slider banner button*/
 const sliderBtn_prev = document.getElementById('page__banner--slider-Btn1');
 const sliderBtn_next = document.getElementById('page__banner--slider-Btn2');
@@ -169,7 +166,7 @@ window.addEventListener('scroll' , function(){
             status_backHomeBtn = true;
         }
     }
-    else {
+    else if(status_backHomeBtn == true){
         if(window.scrollY < navbarHeight){
             userNavbar.classList.remove('user_navbarFixed');
             mainNavbar.classList.remove('main_navbarFixed');
@@ -229,6 +226,4 @@ for(let index1 = 0; index1 < arrivalLink.length; index1++){
         this.classList.add('panelActive');
         panelContentDOM.classList.add('panelActive');
     })    
-
-
 }
