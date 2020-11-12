@@ -209,8 +209,8 @@ function AutoHastag(){
     setTimeout(AutoHastag, 2500);    
 }
 /*New Arrivals*/
-const arrivalLink = document.querySelectorAll('.store__Arrivals-container--inner .inner---panel .panel');
-const arrivalContent = document.querySelectorAll('.store__Arrivals-container--innerContent .innerContent---panel .panelText');
+const arrivalLink = document.querySelectorAll('.store__Arrivals-wrapper--inner .inner---panel .panel');
+const arrivalContent = document.querySelectorAll('.store__Arrivals-wrapper--innerContent .innerContent---panel .panelText');
 
 for(let index1 = 0; index1 < arrivalLink.length; index1++){
 
