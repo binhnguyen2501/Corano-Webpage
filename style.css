@@ -9,6 +9,7 @@ html{
 body{
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 /*Header*/
 header{
@@ -788,7 +789,7 @@ header{
     width: 100%;
     padding-right: 11rem;
     padding-left: 11rem;
-    margin-bottom: 5rem;
+    margin-bottom: 29rem;
 }
 .store__Arrivals{
     text-align: center;
@@ -1083,4 +1084,61 @@ header{
 }
 .newprice{
     color: rgb(194, 153, 88);
+}
+/**********/
+/*Store NewArrivals2*/
+.container_Arrivals2{
+    width: 100%;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    margin-bottom: 5rem;
+}
+.container_Arrivals-wrapper{
+    display: flex;
+    gap: 1.3em;
+}
+.wrapper--contentArrivals{
+    position: relative;
+    overflow: hidden;
+}
+.contentArrivals---img{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    transition: .3s ease-out 0s;
+}
+.contentArrivals---img:hover{
+    transform: scale(1.03);
+}
+.contentArrivals---text{
+    position: absolute;
+    bottom: 2.5rem;
+    left: 2.5rem;
+}
+.contentArrivals---text h5{
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+.wrapper--contentArrivals:hover .contentArrivals---text h5{
+    transform: translateY(-.7rem);
+}
+.contentArrivals---text h6{
+    font-size: 1em;
+    font-weight: 400;
+    color: #999999;
+    text-transform: capitalize;
+    margin: 0;
+    line-height: 1;
+    transform: translateY(-.3rem);
+    opacity: 0;
+    display: none;
+    transition: all 0.2s ease;
+}
+.wrapper--contentArrivals:hover .contentArrivals---text h6{
+    opacity: 1;
+    display: block;
 }
