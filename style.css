@@ -1221,3 +1221,79 @@ header{
     visibility: visible;
 }
 /**********/
+/*Client Suggest*/
+.container-clientSuggest{
+    width: 100%;
+    padding: 15rem 0;
+    margin-bottom: 70px;
+    background-image: url(./image/background.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: relative;
+}
+.clientSuggest--wrapper{
+    position: absolute;
+    display: block;
+    padding-left: 190px;
+    padding-right: 190px;
+    width: 1130px;
+    height: 330px;
+    top: 70px;
+    left: 190px;
+}
+.clientSuggest--wrapper---heading{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.clientSuggest--wrapper---heading h3{
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-size: 1.8em;
+    font-weight: 550;
+    line-height: 1;
+    margin: 0;
+}
+.clientSuggest--wrapper---heading p{
+    color: #555555;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    margin: 12px 0 0;
+    font-size: 1em;
+}
+.clientSuggest--wrapper---content{
+    padding-top: 10px;
+}
+.content----wrapper{
+    position: absolute;
+    right: 7rem;
+    width: 900px;
+    text-align: center;
+}
+.clientImg{
+    display: block;
+    height: 100px;
+    margin: 0 auto 30px;
+    overflow: hidden;
+    width: 100px;
+    border-radius: 100%;
+    max-width: 100%;
+}
+.content----wrapper_Text{
+    font-size: 1em;
+    letter-spacing: .025em;
+    font-style: normal;
+    margin: 0 0 35px 0;
+}
+.content----wrapper_Text2{
+    font-size: 1.1em;
+    font-weight: 550;
+}
+.content----wrapper_Text2__title{
+    color: #999999;
+    font-size: 0.7em;
+    font-style: normal;
+    font-weight: 300;
+}
+.content----wrapper_Text2__title::before{
+    content: '/';
+    padding: 0 8px;
+}
+/**********/
