@@ -1297,3 +1297,129 @@ header{
     padding: 0 8px;
 }
 /**********/
+/*All Products*/
+.container-allProducts{
+    width: 100%;
+    padding-right: 11rem;
+    padding-left: 11rem;
+    margin-bottom: 5rem;
+}
+.allProducts--content1{
+    position: relative;
+    overflow: hidden;
+}
+.allProducts---img{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    transition: .3s ease-out 0s;
+}
+.allProducts---img:hover{
+    transform: scale(1.03);
+}
+.allProducts---text{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    text-align: center;
+}
+.allProducts---text h6{
+    font-size: 1em;
+    line-height: 1;
+    margin: 0 0 20px 0;
+    font-weight: 400;
+    color: #888888;
+    text-transform: uppercase;
+}
+.allProducts---text h5{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+    color: #222222;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+}
+.allProducts---text a{
+    display: inline-block;
+    color: #222222;
+    position: relative;
+    padding-bottom: 4px;
+    margin-top: 30px;
+    font-size: 1em;
+    text-decoration: none;
+    transition: .5s ease;
+}
+.allProducts---text a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #222222;
+    height: 2px;
+    transition: .2s ease;
+}
+.allProducts---text a:hover::before{
+    background: rgb(194, 153, 88);
+}
+.allProducts---text a:hover{
+    color: rgb(194, 153, 88);
+}
+.groupText{
+    display: flex;
+    height: 100px;
+}
+.groupText----content{
+    float: left;
+    width: 60%;
+    display: block;
+}
+.groupText----img{
+    float: left;
+    width: 32%;
+}
+.allProducts--wrapper{
+    display: flex;
+    gap: 1.8rem;
+}
+.allProducts--content1{
+    width: 50%;
+}
+.allProducts--content2,
+.allProducts--content3{
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.content---heading h3{
+    font-size: 1.4em;
+    line-height: 1;
+    font-weight: 550;
+}
+.allProducts---img{
+    width: 100%;
+}
+.groupText_img{
+    width: 95%;
+}
+.product_name{
+    margin-bottom: .5rem;
+}
+.product_name a{
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+    color: #222222;
+    transition: all .3s ease;
+}
+.product_name a:hover{
+    color: rgb(194, 153, 88);
+}
+.product_price{
+    color: #555555;
+    font-size: 15px;
+    font-weight: 400;
+}
