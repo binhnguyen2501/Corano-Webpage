@@ -493,11 +493,12 @@ header{
     left: 324px;
     font-family: 'Lato';
     opacity: 0;
+    z-index: 99;
 }
 .page__banner--slider ul li.active .slider1-Content{
     opacity: 0;
     animation: captionText .5s ease forwards;
-    animation-delay: .1s;
+    animation-delay: .4s;
 }
 .slider2-Content{
     position: absolute;
@@ -505,11 +506,12 @@ header{
     left: 846px;
     font-family: 'Lato';
     opacity: 0;
+    z-index: 99;
 }
 .page__banner--slider ul li.active .slider2-Content{
     opacity: 0;
     animation: captionText1 .5s ease forwards;
-    animation-delay: .1s;
+    animation-delay: .4s;
 }
 .slider3-Content{
     position: absolute;
@@ -517,11 +519,12 @@ header{
     left: 324px;
     font-family: 'Lato';
     opacity: 0;
+    z-index: 99;
 }
 .page__banner--slider ul li.active .slider3-Content{
     opacity: 0;
     animation: captionText .5s ease forwards;
-    animation-delay: .1s;
+    animation-delay: .4s;
 }
 @keyframes captionText{
     from{
@@ -553,7 +556,9 @@ header{
         transform: translateY(0px);
     }
 }
-.slider--Btn{
+.slider1-Content--Btn .slider--Btn,
+.slider2-Content--Btn .slider--Btn,
+.slider3-Content--Btn .slider--Btn{
     background: rgb(194, 153, 88);
     padding: 0 32px;
     border-radius: 20px;
@@ -568,13 +573,16 @@ header{
     margin-top: 1rem;
     transition: all .5s ease-out;
     opacity: 0;
+    cursor: pointer;
+}
+.slider1-Content--Btn .slider--Btn:hover,
+.slider2-Content--Btn .slider--Btn:hover,
+.slider3-Content--Btn .slider--Btn:hover{
+    background: black;
 }
 .page__banner--slider ul li.active .slider--Btn{
     animation: captionBtn .5s ease forwards;
-    animation-delay: .2s;
-}
-.slider--Btn:hover{
-    background: black;
+    animation-delay: .5s;
 }
 .slider1-Content--MainText,
 .slider2-Content--MainText,
