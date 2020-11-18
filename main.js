@@ -130,10 +130,13 @@ const navbarHeight = height.clientHeight;
 
 const userNavbar = document.querySelector('.header__navbar--user');
 const mainNavbar = document.querySelector('.header__navbar--main');
+
 const mainNavbar_search = document.querySelector('.navbar--search');
 const mainNavbar_wrapper = document.querySelector('.navbar--wrapper');
+
 const mainNavbar_title = document.querySelector('.main-title');
 const mainNavbar_title__img = document.querySelector('.main-title img');
+
 const mainNavbar_main = document.querySelector('.navbar--main');
 const home_menu__list = document.querySelector('.home_menu--list');
 const page_menu__list = document.querySelector('.page_menu--list');
@@ -148,16 +151,16 @@ window.addEventListener('scroll' , function(){
         if(window.scrollY >= navbarHeight){
             userNavbar.classList.add('user_navbarFixed');
             mainNavbar.classList.add('main_navbarFixed');
-            mainNavbar_search.style.cssText = 'display: none;';
-            mainNavbar_title.style.cssText = 'margin-left: 12rem;' + 'width: 13.66666667%' + 'flex: 0;';
-            mainNavbar_title__img.style.cssText = 'width: 48%;';
-            mainNavbar_main.style.cssText = 'flex: 1;' + 'float: left;';
-            mainNavbar_wrapper.style.cssText = 'width: 25%' + 'flex: 0;' + 'float: right;' + 'margin-right: 12rem;';
-            home_menu__list.style.cssText = 'top: 39px;';
-            page_menu__list.style.cssText = 'top: 39px;';
-            shop_menu__list.style.cssText = 'top: 39px;';
-            blog_menu__list.style.cssText = 'top: 39px;';
-    
+            mainNavbar_title.classList.add('mainTitleFixed');
+            mainNavbar_title__img.classList.add('mainTitleImgFixed');
+            mainNavbar_search.classList.add('navbarSearchFixed');
+            mainNavbar_main.classList.add('navbarMainFixed');
+            mainNavbar_wrapper.classList.add('navbarWrapperFixed');
+            home_menu__list.classList.add('FixedAll');
+            page_menu__list.classList.add('FixedAll');
+            shop_menu__list.classList.add('FixedAll');
+            blog_menu__list.classList.add('FixedAll');
+            
             backHomeBtn.classList.remove('d-none');
             backHomeBtn.classList.add('backHomeBtn_FixedIn');
             setTimeout(function(){
@@ -170,16 +173,16 @@ window.addEventListener('scroll' , function(){
         if(window.scrollY < navbarHeight){
             userNavbar.classList.remove('user_navbarFixed');
             mainNavbar.classList.remove('main_navbarFixed');
-            mainNavbar_search.style.cssText = 'display: static;';
-            mainNavbar_title.style.cssText = 'margin-left: 7.5rem;' + 'flex: .28;';
-            mainNavbar_title__img.style.cssText = ' width: 45%;';
-            mainNavbar_main.style.cssText = 'flex: .8;';
-            mainNavbar_wrapper.style.cssText = 'flex: .18;';
-            home_menu__list.style.cssText = 'top: 61.5px;';
-            page_menu__list.style.cssText = 'top: 61.5px;';
-            shop_menu__list.style.cssText = 'top: 61.5px;';
-            blog_menu__list.style.cssText = 'top: 61.5px;';
-    
+            mainNavbar_title.classList.remove('mainTitleFixed');
+            mainNavbar_title__img.classList.remove('mainTitleImgFixed');
+            mainNavbar_search.classList.remove('navbarSearchFixed');
+            mainNavbar_main.classList.remove('navbarMainFixed');
+            mainNavbar_wrapper.classList.remove('navbarWrapperFixed');
+            home_menu__list.classList.remove('FixedAll');
+            page_menu__list.classList.remove('FixedAll');
+            shop_menu__list.classList.remove('FixedAll');
+            blog_menu__list.classList.remove('FixedAll');
+
             status_backHomeBtn = false;
             backHomeBtn.classList.add('backHomeBtn_FixedOut');
             setTimeout(function(){
