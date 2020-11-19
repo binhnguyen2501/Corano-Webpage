@@ -124,19 +124,25 @@ page__banner.addEventListener('mouseleave', function(){
     sliderBtn_prev.style.cssText = "visibility: hidden;" + "opacity:0;" + "transition: all .3s ease-out;"
     sliderBtn_next.style.cssText = "visibility: hidden;" + "opacity:0;" + "transition: all .3s ease-out;"
 });
-/*Sticky Navbar*/
+/*Sticky Navbar + Hamburger Navbar*/
 const height = document.querySelector('header')
 const navbarHeight = height.clientHeight;
 
 const userNavbar = document.querySelector('.header__navbar--user');
 const mainNavbar = document.querySelector('.header__navbar--main');
 
+const mainNavbarMobile = document.querySelector('.header__navbar--main---mobile');
+const NavbarMobile = document.querySelector('.navbar--mainMobile');
+const TogglerNavbar = document.querySelector('.header__toggler--navbar');
+const BackTogglerNavbar = document.querySelector('.Close-btn');
+
+const dropDownBtn = document.querySelectorAll('.alldropDown');
+const dropDownMainHome = document.querySelector('.navbar--main_home');
+
 const mainNavbar_search = document.querySelector('.navbar--search');
 const mainNavbar_wrapper = document.querySelector('.navbar--wrapper');
-
 const mainNavbar_title = document.querySelector('.main-title');
 const mainNavbar_title__img = document.querySelector('.main-title img');
-
 const mainNavbar_main = document.querySelector('.navbar--main');
 const home_menu__list = document.querySelector('.home_menu--list');
 const page_menu__list = document.querySelector('.page_menu--list');
@@ -151,6 +157,7 @@ window.addEventListener('scroll' , function(){
         if(window.scrollY >= navbarHeight){
             userNavbar.classList.add('user_navbarFixed');
             mainNavbar.classList.add('main_navbarFixed');
+            mainNavbarMobile.classList.add('main_navbarFixed');
             mainNavbar_title.classList.add('mainTitleFixed');
             mainNavbar_title__img.classList.add('mainTitleImgFixed');
             mainNavbar_search.classList.add('navbarSearchFixed');
@@ -173,6 +180,7 @@ window.addEventListener('scroll' , function(){
         if(window.scrollY < navbarHeight){
             userNavbar.classList.remove('user_navbarFixed');
             mainNavbar.classList.remove('main_navbarFixed');
+            mainNavbarMobile.classList.remove('main_navbarFixed');
             mainNavbar_title.classList.remove('mainTitleFixed');
             mainNavbar_title__img.classList.remove('mainTitleImgFixed');
             mainNavbar_search.classList.remove('navbarSearchFixed');
@@ -192,6 +200,21 @@ window.addEventListener('scroll' , function(){
         }
     }
 });
+TogglerNavbar.addEventListener('click' , function(){
+    NavbarMobile.classList.add('clickActive');
+});
+BackTogglerNavbar.addEventListener('click', function(){
+    NavbarMobile.classList.remove('clickActive');
+})
+
+dropDownBtn.forEach(el => {
+    el.addEventListener('click',function(){
+        this.classList.toggle('fa-angle-right');
+        this.classList.toggle('fa-angle-down');
+    })
+});
+
+
 /*Auto Hastag*/
 var index = 0;
 AutoHastag();

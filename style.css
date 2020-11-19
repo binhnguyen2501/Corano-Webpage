@@ -17,6 +17,9 @@ header{
     height: 20vh;
     position: relative;
 }
+.header__navbar--main---mobile{
+    display: none;
+}
 .header__navbar--user{
     display: flex;
     justify-content: space-between;
@@ -225,19 +228,16 @@ header{
 
 /*Hamburger Navbar*/
 .header__toggler--navbar{
+    display: none;
     border: 2px solid #bababa;
-    position: absolute;
     height: 1.8rem;
     width: 1.8rem;
-    top: 1.5rem;
-    left: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
     z-index: 999;
     padding: .5em .3em;
-    display: none;
 }
 .bar_toggler{
     background: #999999;
@@ -1442,7 +1442,6 @@ header{
 }
 .allProducts--wrapper{
     display: flex;
-    flex-wrap: wrap;
     gap: 1.8rem;
 }
 .allProducts--content1{
@@ -2113,38 +2112,183 @@ footer{
             display: none;
         }
         .header__navbar--main{
-            height: 6vh;
-            display: flex;
-            justify-content: space-between;
-            border: 2px solid black;
-        }
-        .navbar--main{
             display: none;
         }
-        .navbar--search{
-            display: none;
-        }
-        .header__toggler--navbar{
+        .header__navbar--main---mobile{
             display: block;
+            height: 6vh;
+        }
+        .container_navbarMobile{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            padding: 0 15px 0 15px;
+            justify-content: space-around;  
         }
         .header__toggler--navbar{
-            top: 1.3rem;
-            left: 4rem;
             display: block;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
+        .hamberger{
+            align-self: center;
+            width: 10%;
+        }
         .main-title{
-            background: chartreuse;
+            width: 80%;
         }
         .main-title img{
+            display: block;
             margin: 0 auto;
+            width: 55%;
         }
         .navbar--wrapper{
-            background: chocolate;
-            margin: 0;
+            margin-right: -1rem;
+            width:  10%;
+            flex: .2;
         }
+        .top-nav .navbar--mainMobile{
+            position: fixed;
+            background-color: rgba(255,255,255,0.95);
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+            padding: 30px 15px;
+            height: 100%;
+            width: 260px!important;
+            left: -100%;
+            top: 0;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            float: left;
+            list-style: none;
+            transition: left .3s ease;
+            overflow: hidden;
+        }
+        .top-nav .navbar--mainMobile.clickActive{
+            left: 0;
+        }
+        .close-btn{
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .Close-btn{
+            border: none;
+            background: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            color: #666;  
+            transition: color .3s ease;
+        }
+        .Close-btn:hover{
+            color: rgb(194, 153, 88);
+        }
+        .navbar--search{
+            margin-bottom: 10px;
+        }
+        .search{
+            background-color: #fafafae5;
+            padding: .1rem 5rem;
+            margin-top: 25px;
+        }
+        .search_input{
+            width: 100px;
+            margin-left: -2.6rem;
+        }
+        .pes-search{
+            font-size: 19px;
+        }
+        .navbar--contact{
+            margin-top: 1.8rem;
+        }
+        .contact---tittle{
+            font-weight: 550;
+            font-size: 1.25rem;
+        }
+        .contactMobile li{
+            font-size: .9rem;
+            color: #888888;
+            display: inline-block;
+            padding: 0 15px;
+        }
+        .contactMobile li::before{
+            content: "\2022";
+            color: #999999;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .contactMobile li a{
+            color: #999999;
+            text-decoration: none;
+            transition: color .2s ease;
+        }
+        .contactMobile li a:hover{
+            color: rgb(194, 153, 88);
+        }
+        .mobile----Menu{
+            float: left;
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            margin-top: .8rem;
+        }
+        .mobile----Menu li{
+            height: 40px;
+            border-bottom: 1px solid #E6E6E6;
+        }
+        .mobile----Menu li:nth-child(6){
+            border-bottom: none
+        }
+        .mobile----Menu li a{
+            text-decoration: none;
+            color: #555555;
+            font-size: 16px;
+            line-height: 40px;
+            text-transform: capitalize;
+            transition: color .3s ease;
+        }
+        .mobile----Menu li a:hover{
+            color: rgb(194, 153, 88);
+        }
+        .navbar--main_home .active{
+            color: rgb(194, 153, 88);
+        }
+        .fa{
+            letter-spacing: .025em;
+            color: #999999;
+            cursor: pointer;
+            float: right;
+            height: 40px;
+            line-height: 40px;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            top: 0;
+            width: 40px;
+            z-index: 2;
+        }
+        .navbar--main_home{
+            height: 200px;
+            margin-bottom: 10rem;
+        }
+        .submenu{
+            display: block;
+            list-style: none;
+            padding: 0 0 0 10px;
+        }
+        .submenu li:last-child{
+            border-bottom: none;
+        }
+
+
+
+
         /*Banner Page*/
         .page__banner{
             margin: -.55rem 0 24rem 0;
