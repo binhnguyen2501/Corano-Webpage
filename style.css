@@ -223,9 +223,6 @@ header{
     display: block;
     visibility: visible;
 }
-
-
-
 /*Hamburger Navbar*/
 .header__toggler--navbar{
     display: none;
@@ -246,11 +243,6 @@ header{
     height: 2px;
     display: block;
 }
-
-
-
-
-
 /*header_mainNavbar*/
 .navbar--main_home,
 .navbar--main_shop,
@@ -2273,17 +2265,62 @@ footer{
             width: 40px;
             z-index: 2;
         }
-        .navbar--main_home{
-            height: 200px;
-            margin-bottom: 10rem;
+        .fas{
+            position: absolute;
+            right: 0;
+            top: 0;
+            letter-spacing: .025em;
+            color: #999999;
+            cursor: pointer;
+            float: right;
+            height: 40px;
+            line-height: 40px;
+            width: 25px;
+            z-index: 2;
         }
-        .submenu{
-            display: block;
+
+        .submenu,.submenu2{
+            display: none;
             list-style: none;
             padding: 0 0 0 10px;
         }
+        .submenu.show,.submenu2.show{
+            display: block;
+        }        
+        .submenu li a{
+            font-size: .85rem;
+            color: #999999;
+        }
         .submenu li:last-child{
             border-bottom: none;
+        }
+        .submenu li:first-child{
+            border-top: 1px solid #E6E6E6;
+        }
+        .navbar--main{
+            background-color: lightpink;
+        }
+        .shop_menu--list1,
+        .shop_menu--list2,
+        .shop_menu--list3,
+        .blog_menu--list1,
+        .blog_menu--list2,
+        .blog_menu--list3{
+            background-color: lightgreen;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            color: #555555;
+            font-size: 16px;
+            line-height: 40px;
+            text-transform: capitalize;
+            cursor: pointer;
+            transition: color .3s ease;
+        }
+        .shop_menu--list1 span:hover,.shop_menu--list2 span:hover,.shop_menu--list3 span:hover{
+            color: rgb(194, 153, 88);
         }
 
 

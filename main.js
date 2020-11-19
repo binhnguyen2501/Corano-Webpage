@@ -137,7 +137,7 @@ const TogglerNavbar = document.querySelector('.header__toggler--navbar');
 const BackTogglerNavbar = document.querySelector('.Close-btn');
 
 const dropDownBtn = document.querySelectorAll('.alldropDown');
-const dropDownMainHome = document.querySelector('.navbar--main_home');
+const dropDownBtn2 = document.querySelectorAll('.alldropDown2');
 
 const mainNavbar_search = document.querySelector('.navbar--search');
 const mainNavbar_wrapper = document.querySelector('.navbar--wrapper');
@@ -211,6 +211,14 @@ dropDownBtn.forEach(el => {
     el.addEventListener('click',function(){
         this.classList.toggle('fa-angle-right');
         this.classList.toggle('fa-angle-down');
+        this.nextElementSibling.classList.toggle('show');
+    })
+});
+dropDownBtn2.forEach(el2 => {
+    el2.addEventListener('click',function(){
+        this.classList.toggle('fa-angle-right');
+        this.classList.toggle('fa-angle-down');
+        this.nextElementSibling.classList.toggle('show');
     })
 });
 
