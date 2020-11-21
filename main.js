@@ -131,10 +131,15 @@ const navbarHeight = height.clientHeight;
 const userNavbar = document.querySelector('.header__navbar--user');
 const mainNavbar = document.querySelector('.header__navbar--main');
 
+const mainNavbarTablet = document.querySelector('.header__navbar--main---tablet');
+const NavbarTablet = document.querySelector('.navbar--mainTablet');
 const mainNavbarMobile = document.querySelector('.header__navbar--main---mobile');
 const NavbarMobile = document.querySelector('.navbar--mainMobile');
+
 const TogglerNavbar = document.querySelector('.header__toggler--navbar');
 const BackTogglerNavbar = document.querySelector('.Close-btn');
+const TogglerNavbarMobile = document.querySelector('.header__toggler--navbar---Mobile');
+const BackTogglerNavbarMobile = document.querySelector('.Close-btn--Mobile');
 
 const dropDownBtn = document.querySelectorAll('.alldropDown');
 const dropDownBtn2 = document.querySelectorAll('.alldropDown2');
@@ -157,6 +162,7 @@ window.addEventListener('scroll' , function(){
         if(window.scrollY >= navbarHeight){
             userNavbar.classList.add('user_navbarFixed');
             mainNavbar.classList.add('main_navbarFixed');
+            mainNavbarTablet.classList.add('main_navbarFixed');
             mainNavbarMobile.classList.add('main_navbarFixed');
             mainNavbar_title.classList.add('mainTitleFixed');
             mainNavbar_title__img.classList.add('mainTitleImgFixed');
@@ -180,6 +186,7 @@ window.addEventListener('scroll' , function(){
         if(window.scrollY < navbarHeight){
             userNavbar.classList.remove('user_navbarFixed');
             mainNavbar.classList.remove('main_navbarFixed');
+            mainNavbarTablet.classList.remove('main_navbarFixed');
             mainNavbarMobile.classList.remove('main_navbarFixed');
             mainNavbar_title.classList.remove('mainTitleFixed');
             mainNavbar_title__img.classList.remove('mainTitleImgFixed');
@@ -200,12 +207,23 @@ window.addEventListener('scroll' , function(){
         }
     }
 });
+
 TogglerNavbar.addEventListener('click' , function(){
-    NavbarMobile.classList.add('clickActive');
+    NavbarTablet.classList.add('clickActive');
 });
 BackTogglerNavbar.addEventListener('click', function(){
+    NavbarTablet.classList.remove('clickActive');
+})
+TogglerNavbarMobile.addEventListener('click' , function(){
+    NavbarMobile.classList.add('clickActive');
+});
+BackTogglerNavbarMobile.addEventListener('click', function(){
     NavbarMobile.classList.remove('clickActive');
 })
+
+
+
+
 
 dropDownBtn.forEach(el => {
     el.addEventListener('click',function(){
