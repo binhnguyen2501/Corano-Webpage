@@ -529,11 +529,11 @@ header{
     background: #141313;
 }
 #page__banner--slider-Btn2{
-    z-index: 9999;
+    z-index: 9997;
     right: 5.5%;
 }
 #page__banner--slider-Btn1{
-    z-index: 9999;
+    z-index: 9997;
     left: 0%;
 }
 .peBtn{
@@ -2146,6 +2146,7 @@ footer{
     .header__navbar--main---tablet{
         display: block;
         height: 8vh;
+        z-index: 9999;
     }
     .container_navbarTablet{
         display: flex;
@@ -2528,18 +2529,14 @@ footer{
 @media screen and (max-width: 830px){
     /*Banner Page*/
     .page__banner{
-        margin: 1.5rem 0 25rem 0;
+        margin: 1rem 0 25rem 0;
     }
     .slider1-Content--Text,.slider2-Content--Text,.slider3-Content--Text{
         font-size: 15px;
     }
     /*Store Hastag*/
     .container{
-        width: 100%;
         padding: 0 0 1.8rem 0;
-        margin-top: 0rem;
-        margin-bottom: 4rem;
-        border-bottom: 1px solid #efefef;
     }
     .store__Hastag{
         text-align: center;
@@ -2585,9 +2582,6 @@ footer{
 }
 @media screen and (max-width: 770px){
     /*Store Hastag*/
-    .container{
-        padding: 0;
-    }
     .store__Hastag{
         width: 700px;
     }
@@ -2627,6 +2621,7 @@ footer{
     .header__navbar--main---mobile{
         display: block;
         height: 5vh;
+        z-index: 9999;
     }
     .container_navbarMobile{
         display: flex;
@@ -2848,7 +2843,7 @@ footer{
     }
     /*Banner Page*/
     .page__banner{
-        margin: 5.8rem 0 22rem 0;
+        margin: 5.8rem 0 24rem 0;
     }
     .slider1-img,.slider2-img,.slider3-img{
         transform: scale(2.4);
@@ -2885,7 +2880,7 @@ footer{
     }
     /*Store Hastag*/
     .container{
-        padding: 0 0 6rem 0;
+        padding: 0 0 5rem 0;
     }
     .store__Hastag{
         width: 400px;
@@ -3239,7 +3234,7 @@ footer{
     }
     /*Banner Page*/
     .page__banner{
-        margin: 5.5rem 0 19rem 0;
+        margin: 5.5rem 0 20rem 0;
     }
     .slider1-Content{
         top: -70px;
@@ -3270,6 +3265,9 @@ footer{
         margin-top: -15rem;
     }
     /*Store Hastag*/
+    .container{
+        padding: 0 0 6rem 0;
+    }
     .store__Hastag{
         width: 310px;
     }
