@@ -2396,10 +2396,10 @@ footer{
         margin-left: 1rem;
     }
     .work--icon4{
-        margin-left: -2.5rem;
+        margin-left: -1.5rem;
     }
     .work--content4{
-        margin-left: -1rem;
+        margin-left: -.5rem;
     }
     /*Store MainProduct*/
     .container_mainProduct{
@@ -3177,6 +3177,10 @@ footer{
     }
 }
 @media screen and (max-width: 365px){
+    /*Store Hastag*/
+    .container{
+        padding: 0 0 6.5rem 0;
+    }
      /*Store Work*/
      .work--icon4{
         margin-left: 1rem;
