@@ -727,12 +727,10 @@ header{
     padding: 0 11rem 0 11rem;
     margin-bottom: 5rem;
     display: flex;
-    background-color: lightpink;
     gap: 1em;
 }
 .store__Work{
     width: 100%;
-    background-color: lightcyan;
 }
 .store__Work-inner{
     display: flex;
@@ -1814,7 +1812,6 @@ footer{
     }
     .store__Work{
         width: 100%;
-        background-color: lightcyan;
     }
     /*Store MainProduct*/
     .container_mainProduct{
@@ -2947,14 +2944,18 @@ footer{
         margin-right: 1rem;
     }
     /*Client Suggest*/
+    .clientSuggest--wrapper{
+        top: 30px;
+    }
     .content----wrapper{
         left: 1rem;
         width: 380px;
         padding: 1rem 0;
     }
     .clientSuggest--wrapper---heading{
+        font-size: .9rem;
         text-align: center;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         margin-left: -350px;
     }
     /*All Products*/
@@ -3100,11 +3101,19 @@ footer{
         margin-right: 1rem;
     }
     /*Client Suggest*/
+    .clientSuggest--wrapper{
+        top: 30px;
+    }
     .content----wrapper{
         width: 350px;
     }
     .clientSuggest--wrapper---heading{
-        margin-left: -380px;
+        margin-right: 17rem;
+        font-size: .9rem;
+    }
+    .content----wrapper_Text1{
+        font-size: .95rem;
+        margin-right: 1rem;
     }
     /*Store NewArrivals*/
     .store__Arrivals-heading{
@@ -3238,6 +3247,9 @@ footer{
         margin-right: 1rem;
     }
     /*Client Suggest*/
+    .clientSuggest--wrapper{
+        top: 30px;
+    }
     .content----wrapper{
         width: 300px;
     }
