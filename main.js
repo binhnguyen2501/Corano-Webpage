@@ -159,7 +159,7 @@ page__banner.addEventListener('mouseleave', function(){
     sliderBtn_next.style.cssText = "visibility: hidden;" + "opacity:0;" + "transition: all .3s ease-out;"
 });
 /*Sticky Navbar + Hamburger Navbar*/
-const height = document.querySelector('header')
+const height = document.querySelector('header');
 const navbarHeight = height.clientHeight;
 
 const userNavbar = document.querySelector('.header__navbar--user');
@@ -269,7 +269,6 @@ dropDownBtn2.forEach(el2 => {
         this.nextElementSibling.classList.toggle('show');
     })
 });
-
 /*Auto Hastag*/
 var index = 0;
 AutoHastag();
