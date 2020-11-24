@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const slides = document.querySelectorAll('.page__banner--slider ul li');
     const prevBtn = document.querySelector('.prev');
     const nextBtn = document.querySelector('.next');
+    const slidesBtn = document.querySelector('.slidesBtn');
 
     var index = 0,
         trangThai = 'dangDungYen';
@@ -103,14 +104,47 @@ document.addEventListener('DOMContentLoaded', function(){
         phanTuHienTai.classList.add('bienMatKhiPrev');
         phanTuTiepTheo.classList.add('hienKhiPrev');
     };
+
+    function eachSlide(){
+        for(let i = 0; i < slides.length; i++){
+            document.querySelector('.slidesBtn .Btn-' + (i+1) + '');
+        }
+    }
+    eachSlide();
+
+    function updateBtnSlide(){
+        for(let i = 0; i < slidesBtn.children.length;i++){
+            slidesBtn.children[i].classList.remove('ActiveBtn');
+        }
+        slidesBtn.children[index].classList.add('ActiveBtn');
+    }
+
     nextBtn.addEventListener('click', function(){
         NextSlide();
+        updateBtnSlide();
         resetAutoSlide();
     });
     prevBtn.addEventListener('click',function(){
         PrevSlide();
+        updateBtnSlide();
         resetAutoSlide();
-    });   
+    });
+
+    for(let i=0; i< slides.length; i++){
+        clearInterval(timeDelay);
+        const eachBtn = document.querySelector('.slidesBtn .Btn-' + (i+1) + '');
+        eachBtn.addEventListener('click',function(){
+            for(let x=0; x< slides.length; x++){
+                document.querySelector('.slidesBtn .Btn-' + (x+1) + '').classList.remove('ActiveBtn');
+                slides[x].classList.remove("active");
+            }
+            this.classList.add('ActiveBtn');
+            var nutkichhoat = this;
+            var vitrinut = 0;
+            for(vitrinut=0; nutkichhoat = nutkichhoat.previousElementSibling; vitrinut++){}
+            slides[vitrinut].classList.add('active');
+        })
+    }
 });
 /*Slider banner button*/
 const sliderBtn_prev = document.getElementById('page__banner--slider-Btn1');
@@ -221,10 +255,6 @@ BackTogglerNavbarMobile.addEventListener('click', function(){
     NavbarMobile.classList.remove('clickActive');
 })
 
-
-
-
-
 dropDownBtn.forEach(el => {
     el.addEventListener('click',function(){
         this.classList.toggle('fa-angle-right');
@@ -239,7 +269,6 @@ dropDownBtn2.forEach(el2 => {
         this.nextElementSibling.classList.toggle('show');
     })
 });
-
 
 /*Auto Hastag*/
 var index = 0;

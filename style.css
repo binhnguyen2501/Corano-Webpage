@@ -3,13 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
-}
-body{
+html,body{
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 /*Header*/
 header{
@@ -511,6 +509,9 @@ header{
         transform: scale(1);
         opacity: 1;
     }
+}
+.slidesBtn{
+    display: none;
 }
 .chuyenslide{
     position: static;
@@ -1965,6 +1966,25 @@ footer{
     .page__banner{
         margin-bottom: 25rem;
     }
+    .slidesBtn{
+        width: 100px;
+        display: flex;
+        gap: .3rem;
+        position: absolute;
+        top: 19rem;
+        left: 3.5rem;
+    }
+    .Btn-1,.Btn-2,.Btn-3{
+        padding: .4rem .4rem;
+        border: none;
+        background: #bcbcbc;
+    }
+    div .ActiveBtn{
+        background: #666666;
+    }
+    .chuyenslide{
+        display: none;
+    }
     .slider1-Content{
         top: 110px;
         left: 195px;
@@ -2814,6 +2834,10 @@ footer{
     .page__banner{
         margin: 5.8rem 0 24rem 0;
     }
+    .slidesBtn{
+        top: 12rem;
+        left: 3.5rem;
+    }
     .slider1-img,.slider2-img,.slider3-img{
         transform: scale(2.4);
     }
@@ -2821,11 +2845,11 @@ footer{
         right: 18.5%;
     }
     .slider1-Content{
-        top: -80px;
+        top: -30px;
         right: 20px;
     }
     .slider2-Content{
-        top: 90px;
+        top: 50px;
         left: 40px;
     }
     .slider3-Content{
@@ -3105,9 +3129,13 @@ footer{
     .page__banner{
         margin: 5.5rem 0 22rem 0;
     }
+    .slidesBtn{
+        top: 10rem;
+        left: 3.5rem;
+    }
     .slider2-Content{
-        top: 85px;
-        left: 10px;
+        top: 15px;
+        left: 7px;
     }
     /*Store Hastag*/
     .container{
@@ -3205,16 +3233,20 @@ footer{
     .page__banner{
         margin: 5.5rem 0 20rem 0;
     }
+    .slidesBtn{
+        top: 8rem;
+        left: 3rem;
+    }
     .slider1-Content{
-        top: -70px;
+        top: 0px;
         left: 10px;
     }
     .slider2-Content{
-        top: 90px;
+        top: 20px;
         left: 10px;
     }
     .slider3-Content{
-        top: -70px;
+        top: 0px;
         right: 10px;
     }
     .slider1-Content--MainText,.slider2-Content--MainText,.slider3-Content--MainText{
