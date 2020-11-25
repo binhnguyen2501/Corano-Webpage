@@ -2491,6 +2491,9 @@ footer{
     .page__banner{
         margin: 1rem 0 25rem 0;
     }
+    .slidesBtn{
+        top: 17rem;
+    }
     .slider1-Content--Text,.slider2-Content--Text,.slider3-Content--Text{
         font-size: 15px;
     }
