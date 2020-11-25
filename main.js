@@ -196,8 +196,7 @@ window.addEventListener('scroll' , function(){
         if(window.scrollY >= navbarHeight){
             userNavbar.classList.add('user_navbarFixed');
             mainNavbar.classList.add('main_navbarFixed');
-            mainNavbarTablet.classList.add('main_navbarFixed');
-            mainNavbarMobile.classList.add('main_navbarFixed');
+            
             mainNavbar_title.classList.add('mainTitleFixed');
             mainNavbar_title__img.classList.add('mainTitleImgFixed');
             mainNavbar_search.classList.add('navbarSearchFixed');
@@ -220,8 +219,7 @@ window.addEventListener('scroll' , function(){
         if(window.scrollY < navbarHeight){
             userNavbar.classList.remove('user_navbarFixed');
             mainNavbar.classList.remove('main_navbarFixed');
-            mainNavbarTablet.classList.remove('main_navbarFixed');
-            mainNavbarMobile.classList.remove('main_navbarFixed');
+            
             mainNavbar_title.classList.remove('mainTitleFixed');
             mainNavbar_title__img.classList.remove('mainTitleImgFixed');
             mainNavbar_search.classList.remove('navbarSearchFixed');
@@ -269,6 +267,7 @@ dropDownBtn2.forEach(el2 => {
         this.nextElementSibling.classList.toggle('show');
     })
 });
+
 /*Auto Hastag*/
 var index = 0;
 AutoHastag();
