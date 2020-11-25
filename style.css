@@ -1342,6 +1342,7 @@ header{
     max-width: 100%;
 }
 .content----wrapper_Text1{
+    color: #555555;
     font-size: 1em;
     letter-spacing: .025em;
     font-style: normal;
@@ -2137,6 +2138,9 @@ footer{
         height: 8vh;
         z-index: 9999;
     }
+    .main_navbarFixed{
+        height: 5vh;
+    }
     .container_navbarTablet{
         display: flex;
         width: 100%;
@@ -2568,9 +2572,13 @@ footer{
         display: none;
     }
     .header__navbar--main---mobile{
+        background-color: rgba(255,255,255,0.95);
         display: block;
         height: 5vh;
         z-index: 9999;
+    }
+    .main_navbarFixed{
+        height: auto;
     }
     .container_navbarMobile{
         display: flex;
@@ -2855,13 +2863,15 @@ footer{
         left: 50%;
     }
     .text1,.text4{
-        left: 40%;
+        text-align: center;
+        left: 70%;
     }
     .text2{
         width: 60%;
+        left: 70%;
     }
     .text3{
-        left: 50%;
+        left: 70%;
     }
     /*Store NewArrivals*/
     .container_Arrivals{

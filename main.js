@@ -164,6 +164,8 @@ const navbarHeight = height.clientHeight;
 
 const userNavbar = document.querySelector('.header__navbar--user');
 const mainNavbar = document.querySelector('.header__navbar--main');
+const mobileNavbar = document.querySelector('.header__navbar--main---mobile');
+const tabletNavbar = document.querySelector('.header__navbar--main---tablet');
 
 const mainNavbarTablet = document.querySelector('.header__navbar--main---tablet');
 const NavbarTablet = document.querySelector('.navbar--mainTablet');
@@ -196,6 +198,8 @@ window.addEventListener('scroll' , function(){
         if(window.scrollY >= navbarHeight){
             userNavbar.classList.add('user_navbarFixed');
             mainNavbar.classList.add('main_navbarFixed');
+            mobileNavbar.classList.add('main_navbarFixed');
+            tabletNavbar.classList.add('main_navbarFixed');
             
             mainNavbar_title.classList.add('mainTitleFixed');
             mainNavbar_title__img.classList.add('mainTitleImgFixed');
@@ -219,6 +223,8 @@ window.addEventListener('scroll' , function(){
         if(window.scrollY < navbarHeight){
             userNavbar.classList.remove('user_navbarFixed');
             mainNavbar.classList.remove('main_navbarFixed');
+            mobileNavbar.classList.remove('main_navbarFixed');
+            tabletNavbar.classList.remove('main_navbarFixed');
             
             mainNavbar_title.classList.remove('mainTitleFixed');
             mainNavbar_title__img.classList.remove('mainTitleImgFixed');
