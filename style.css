@@ -134,6 +134,7 @@ header{
 }
 .search-box{
     border: none;
+    outline: none;
 }
 .search_btn{
     position: absolute;
