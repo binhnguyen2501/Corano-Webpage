@@ -141,6 +141,7 @@ header{
     background-color: transparent;
     padding: .2rem .2rem 0 .2rem;
     border: none;
+    outline: none;
 }
 .search_input{
     border: none;
@@ -1720,6 +1721,7 @@ footer{
     display: block;
     background: none;
     border: none;
+    outline: none;
     color: #999999;
     font-size: 1em;
     height: 35px;
@@ -1736,6 +1738,7 @@ footer{
     display: block;
     background: none;
     border: none;
+    outline: none;
     box-shadow: none;
     color: #c29958;
     cursor: pointer;
@@ -2199,6 +2202,7 @@ footer{
     }
     .Close-btn{
         border: none;
+        outline: none;
         background: none;
         padding: 10px 20px;
         font-size: 14px;
