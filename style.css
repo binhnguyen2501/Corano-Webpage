@@ -79,7 +79,8 @@ header{
 .navbar--main{
     align-items: center;
     display: flex;
-    justify-content: stretch;
+    justify-content: flex-start;
+    gap: 1rem;
     margin-bottom: 0 !important;
     flex: .8;
     list-style: none;
@@ -93,7 +94,6 @@ header{
     font-weight: 500;
     font-size: 15.5px;
     text-decoration: none;
-    margin-right: 25px;
     color: black;
     transition: color .6s ease-out;
 }
