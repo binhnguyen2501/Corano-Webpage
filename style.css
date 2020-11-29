@@ -538,6 +538,7 @@ header{
     position: absolute;
     margin-top: 17%;
     border: none;
+    outline: none;
     visibility: hidden;
     opacity: 0;
     transform: matrix(1, 0, 0, 1, 40, -20);
