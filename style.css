@@ -816,13 +816,13 @@ header{
 }
 .mainProduct---text{
     position: absolute;
-    top: 50%;
-    left: 70%;
+    top: 55%;
+    left: 80%;
     transform: translate(-50%, -50%);
-    width: 40%;
 }
 .text2{
-    width: 60%;
+    width: 42%;
+    left: 370px;
 }
 .text3{
     left: 75%;
@@ -836,8 +836,8 @@ header{
     text-transform: uppercase;
 }
 .mainProduct---text h5{
-    font-size: 2em;
-    font-weight: 700;
+    font-size: 1.8em;
+    font-weight: 550;
     margin: 0;
     line-height: 1;
     color: #222222;
@@ -1412,10 +1412,10 @@ header{
 }
 .allProducts---text{
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 25%;
     transform: translate(-50%, -50%);
-    width: 50%;
+    width: 38%;
     text-align: center;
 }
 .allProducts---text h6{
@@ -1427,12 +1427,15 @@ header{
     text-transform: uppercase;
 }
 .allProducts---text h5{
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.8em;
+    font-weight: 550;
     margin: 0;
     line-height: 1;
     color: #222222;
     font-family: Lato, Arial, Helvetica, sans-serif;
+}
+.allProducts---text p{
+    margin-bottom: 0px;
 }
 .allProducts---text a{
     display: inline-block;
@@ -1658,7 +1661,14 @@ footer{
     line-height: 22px;
 }
 .Tittle h3{
-    margin-bottom: 10px;
+    margin-bottom: .5rem;
+    font-size: 1.12em;
+    line-height: 1;
+    color: #222222;
+    font-weight: 550;
+}
+.Tittles h3{
+    margin-bottom: 1.5rem;
     font-size: 1.12em;
     line-height: 1;
     color: #222222;
@@ -1666,7 +1676,7 @@ footer{
 }
 .contentText .contact-icon{
     font-size: 14px;
-    margin-bottom: .4rem;
+    margin-bottom: .6rem;
 }
 .contentText .contact-icon i{
     margin-right: 15px;
@@ -1706,7 +1716,7 @@ footer{
 .social-icons li .social-icon:hover{
     background: rgb(194, 153, 88);
 }
-.Title-social{
+.Tittle-social{
     margin-left: .5rem;
 }
 .my-footer{
@@ -1727,7 +1737,7 @@ footer{
 }
 .contact-footer--wrapper1{
     width: 65%;
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 .contact-footer--wrapper2{
     width: 30%;
