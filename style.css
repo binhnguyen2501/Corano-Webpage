@@ -202,14 +202,14 @@ header{
     display: none;
     animation: slide 300ms ease-in-out forwards;
     transform-origin: top center;
-    transition: all .3s ease-out;
+    transition: all .8s ease-out;
 }
-.navbar--wishlist_card::after{
+.wishlist_cart-content::after{
     content: '';
     display: block;
     position: absolute;
-    top: 15px;
-    left: -15px;
+    top: -19px;
+    right: -15px;
     width: 60px;
     height: 50px;
 }
