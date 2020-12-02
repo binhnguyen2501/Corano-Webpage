@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', function(){
     var index = 0,
         trangThai = 'dangDungYen';
 
-    let timeDelay = setInterval(AutoSlide,9000);
+    let timeDelay = setInterval(AutoSlide,4000);
     // xử lý tự động chuyển slide
     function AutoSlide(){		
         NextSlide();
     };
     function resetAutoSlide(){
         clearInterval(timeDelay);
-        timeDelay = setInterval(AutoSlide,9000);
+        timeDelay = setInterval(AutoSlide,4000);
     };
     function NextSlide(){
         // kiểm tra trạng thái
