@@ -72,10 +72,13 @@ $mainColor: rgb(194, 153, 88);
 	}
 	.main-title {
 		margin: 0.5rem auto;
+		a {
+			width: 100%;
+		}
 	}
 	.main-title img {
 		display: block;
-		width: 32%;
+		width: 35%;
 	}
 	.navbar--wrapper {
 		margin-right: -0.5rem;
