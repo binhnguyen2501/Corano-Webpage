@@ -1,0 +1,46 @@
+$mainColor: rgb(194, 153, 88);
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+/*Go-Up Btn*/
+.backHomeBtn {
+	position: fixed;
+	bottom: 2.6rem;
+	right: 1rem;
+	z-index: 9997;
+}
+.backHomeBtn_FixedIn {
+	visibility: visible;
+	position: fixed;
+	bottom: 2.6rem;
+	right: 1rem;
+	animation: slideIn 0.7s ease-out;
+	transition: animation 0.7s ease-out;
+}
+.backHomeBtn_FixedOut {
+	animation: slideOut 0.7s ease-out;
+	transition: animation 0.7s ease-out;
+}
+.peBtn__goUp {
+	font-size: 2rem;
+	padding: 0.45rem;
+	color: white;
+	background: rgba(0, 0, 0, 0.8);
+	border-radius: 100%;
+}
+.peBtn__goUp:hover {
+	background: $mainColor;
+	transition: all 0.7s ease-in;
+}
+
+@import "./header";
+@import "./footer";
+@import "./responTablet";
+@import "./responMobile";
