@@ -493,12 +493,10 @@ $mainColor: rgb(194, 153, 88);
 	color: black;
 }
 .panelText {
-	opacity: 0;
-	visibility: hidden;
+	display: none;
 }
 .panelActive.panelText {
-	opacity: 1;
-	visibility: visible;
+	display: block;
 	transition: all 0.4s ease;
 }
 .panelText-1 {
