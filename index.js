@@ -180,7 +180,6 @@ function AutoHastag(){
 }
 /*New Arrivals*/
 const arrivalLink = document.querySelectorAll('.store__Arrivals-wrapper--inner .inner---panel .panel');
-const arrivalContent = document.querySelectorAll('.store__Arrivals-wrapper--innerContent .innerContent---panel .panelText');
 
 for(let index1 = 0; index1 < arrivalLink.length; index1++){
 
