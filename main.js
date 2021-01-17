@@ -86,17 +86,23 @@ window.addEventListener('scroll' , function(){
     }
 });
 
+const overlay = document.querySelector('.overlay');
+
 TogglerNavbar.addEventListener('click' , function(){
     NavbarTablet.classList.add('clickActive');
+    overlay.classList.add('clickActive');
 });
 BackTogglerNavbar.addEventListener('click', function(){
     NavbarTablet.classList.remove('clickActive');
+    overlay.classList.remove('clickActive');
 })
 TogglerNavbarMobile.addEventListener('click' , function(){
     NavbarMobile.classList.add('clickActive');
+    overlay.classList.add('clickActive');
 });
 BackTogglerNavbarMobile.addEventListener('click', function(){
     NavbarMobile.classList.remove('clickActive');
+    overlay.classList.remove('clickActive');
 })
 
 dropDownBtn.forEach(el => {
