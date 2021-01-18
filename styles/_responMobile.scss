@@ -99,11 +99,13 @@ $mainColor: rgb(194, 153, 88);
 		flex-direction: column;
 		float: left;
 		list-style: none;
-		transition: left 0.3s ease;
+		transition: all linear 0.3s;
 		overflow: hidden;
+		opacity: 0;
 	}
 	.top-nav .navbar--mainMobile.clickActive {
 		left: 0;
+		opacity: 1;
 	}
 	.close-btn--Mobile {
 		display: block;
@@ -113,11 +115,15 @@ $mainColor: rgb(194, 153, 88);
 	}
 	.Close-btn--Mobile {
 		border: none;
+		outline: none;
 		background: none;
 		padding: 10px 20px;
 		font-size: 14px;
 		color: #666;
 		transition: color 0.3s ease;
+	}
+	.Close-btn--Mobile:focus {
+		outline: none;
 	}
 	.Close-btn--Mobile:hover {
 		color: $mainColor;

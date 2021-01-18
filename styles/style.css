@@ -20,6 +20,8 @@ body {
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9998;
+  -webkit-animation: fadeIn linear 0.3s;
+          animation: fadeIn linear 0.3s;
 }
 
 .overlay.clickActive {
@@ -277,6 +279,10 @@ header {
   background-color: transparent;
   padding: 0.2rem 0.2rem 0 0.2rem;
   border: none;
+  outline: none;
+}
+
+.search_btn:focus {
   outline: none;
 }
 
@@ -717,6 +723,24 @@ header {
     -webkit-transform: translateY(3rem);
             transform: translateY(3rem);
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -1435,12 +1459,14 @@ footer {
             flex-direction: column;
     float: left;
     list-style: none;
-    -webkit-transition: left 0.3s ease;
-    transition: left 0.3s ease;
+    -webkit-transition: all linear 0.3s;
+    transition: all linear 0.3s;
     overflow: hidden;
+    opacity: 0;
   }
   .top-nav .navbar--mainTablet.clickActive {
     left: 0;
+    opacity: 1;
   }
   .close-btn {
     display: block;
@@ -1970,12 +1996,14 @@ footer {
             flex-direction: column;
     float: left;
     list-style: none;
-    -webkit-transition: left 0.3s ease;
-    transition: left 0.3s ease;
+    -webkit-transition: all linear 0.3s;
+    transition: all linear 0.3s;
     overflow: hidden;
+    opacity: 0;
   }
   .top-nav .navbar--mainMobile.clickActive {
     left: 0;
+    opacity: 1;
   }
   .close-btn--Mobile {
     display: block;
@@ -1985,12 +2013,16 @@ footer {
   }
   .Close-btn--Mobile {
     border: none;
+    outline: none;
     background: none;
     padding: 10px 20px;
     font-size: 14px;
     color: #666;
     -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease;
+  }
+  .Close-btn--Mobile:focus {
+    outline: none;
   }
   .Close-btn--Mobile:hover {
     color: #c29958;

@@ -18,6 +18,7 @@ body {
 	right: 0;
 	background-color: rgba(0, 0, 0, 0.5);
 	z-index: 9998;
+	animation: fadeIn linear 0.3s;
 }
 .overlay.clickActive {
 	display: block;

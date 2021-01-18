@@ -445,11 +445,13 @@ $mainColor: rgb(194, 153, 88);
 		flex-direction: column;
 		float: left;
 		list-style: none;
-		transition: left 0.3s ease;
+		transition: all linear 0.3s;
 		overflow: hidden;
+		opacity: 0;
 	}
 	.top-nav .navbar--mainTablet.clickActive {
 		left: 0;
+		opacity: 1;
 	}
 	.close-btn {
 		display: block;

@@ -365,6 +365,12 @@
   background: black;
 }
 
+.slider1-Content--Btn .slider--Btn:focus,
+.slider2-Content--Btn .slider--Btn:focus,
+.slider3-Content--Btn .slider--Btn:focus {
+  outline: none;
+}
+
 .page__banner--slider ul li.active .slider--Btn {
   -webkit-animation: captionBtn 0.5s ease forwards;
           animation: captionBtn 0.5s ease forwards;
@@ -2021,12 +2027,14 @@
             flex-direction: column;
     float: left;
     list-style: none;
-    -webkit-transition: left 0.3s ease;
-    transition: left 0.3s ease;
+    -webkit-transition: all linear 0.3s;
+    transition: all linear 0.3s;
     overflow: hidden;
+    opacity: 0;
   }
   .top-nav .navbar--mainTablet.clickActive {
     left: 0;
+    opacity: 1;
   }
   .close-btn {
     display: block;
@@ -2556,12 +2564,14 @@
             flex-direction: column;
     float: left;
     list-style: none;
-    -webkit-transition: left 0.3s ease;
-    transition: left 0.3s ease;
+    -webkit-transition: all linear 0.3s;
+    transition: all linear 0.3s;
     overflow: hidden;
+    opacity: 0;
   }
   .top-nav .navbar--mainMobile.clickActive {
     left: 0;
+    opacity: 1;
   }
   .close-btn--Mobile {
     display: block;
@@ -2571,12 +2581,16 @@
   }
   .Close-btn--Mobile {
     border: none;
+    outline: none;
     background: none;
     padding: 10px 20px;
     font-size: 14px;
     color: #666;
     -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease;
+  }
+  .Close-btn--Mobile:focus {
+    outline: none;
   }
   .Close-btn--Mobile:hover {
     color: #c29958;

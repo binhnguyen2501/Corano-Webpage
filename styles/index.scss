@@ -215,6 +215,11 @@ $mainColor: rgb(194, 153, 88);
 .slider3-Content--Btn .slider--Btn:hover {
 	background: black;
 }
+.slider1-Content--Btn .slider--Btn:focus,
+.slider2-Content--Btn .slider--Btn:focus,
+.slider3-Content--Btn .slider--Btn:focus {
+	outline: none;
+}
 .page__banner--slider ul li.active .slider--Btn {
 	animation: captionBtn 0.5s ease forwards;
 	animation-delay: 0.5s;

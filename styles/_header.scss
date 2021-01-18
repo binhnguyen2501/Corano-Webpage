@@ -135,6 +135,9 @@ header {
 	border: none;
 	outline: none;
 }
+.search_btn:focus {
+	outline: none;
+}
 .search_input {
 	border: none;
 	outline: none;
@@ -434,6 +437,14 @@ header {
 	to {
 		transform: translateY(3rem);
 		opacity: 0;
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
 /**********/
