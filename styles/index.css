@@ -2055,6 +2055,9 @@
   .Close-btn:hover {
     color: #c29958;
   }
+  .Close-btn:focus {
+    outline: none;
+  }
   .navbar--search {
     margin-bottom: 10px;
   }
